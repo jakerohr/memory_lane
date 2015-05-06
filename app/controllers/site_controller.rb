@@ -1,4 +1,5 @@
 class SiteController < ApplicationController
+
   before_filter :find_model
 
   def index
