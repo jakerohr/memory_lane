@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'site#index'
+  get 'test' => 'site#show'
 
   # SESSIONS
   get "login" => 'sessions#new'
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   # SIGNUP
-  get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
   # Example of regular route:
