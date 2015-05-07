@@ -41,7 +41,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
-          <li class="navbar-brand">Have a nice stroll, <%= @current_user.name %></li>
+          <li class="navbar-brand">Have a nice stroll, <%= @current_user.email %></li>
           <li><%= link_to "Logout", logout_path %></li>
         <% else %>
           <li><a class='pointer' data-toggle="modal" data-target="#loginModal">Login</a></li>
