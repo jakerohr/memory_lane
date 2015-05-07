@@ -1,3 +1,118 @@
+img {
+  vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .pointer:hover {
   cursor:pointer;
 }
+
+.two-for-two {
+  background-color: #00BFFF;
+}
+
+.image-fit {
+  width: 100%;
+  height: auto;
+}
+
+.xs-img {
+  width: 200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xs-square-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sm-img {
+  width: 350px;
+  height: auto;
+  overflow: hidden;
+}
+
+.sm-square-img {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.md-img {
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.md-square-img {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.lg-img {
+  width: 700px;
+  height: auto;
+  overflow: hidden;
+}
+
+.lg-square-img {
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.xl-img {
+  width: 900px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xl-square-img {
+  width: 900px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.xxl-img {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xxl-square-img {
+  width: 1200px;
+  height: 1200px;
+  overflow: hidden;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  margin: auto;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+.third {
+  width: 33vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.vert-align {
+  vertical-align: middle
+}
+

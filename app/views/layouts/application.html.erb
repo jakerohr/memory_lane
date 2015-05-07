@@ -8,6 +8,10 @@
   <!-- JQuery -->
   <script src="//code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+  <!-- Lettering.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js">
   <!-- Cloudinary upload widget -->
   <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   <!-- Partials -->
@@ -39,7 +43,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
-          <li class="navbar-brand">Have a nice stroll, <%= @current_user.email %></li>
+          <li class="navbar-brand">Have a nice stroll, <%= @current_user.name %></li>
           <li><%= link_to "Logout", logout_path %></li>
         <% else %>
           <li><a class='pointer' data-toggle="modal" data-target="#loginModal">Login</a></li>

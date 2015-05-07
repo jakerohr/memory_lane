@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   has_secure_password
   validates_presence_of :password, on: :create
 
+  has_many :pages
+  has_many :partials
+
   validates :email,
     presence: true,
     uniqueness: {case_sensitive: false}
