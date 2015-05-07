@@ -1,0 +1,13 @@
+<div class="col-md-6 col-md-offset-3">
+
+  <h1>Login</h1>
+
+  <%= bootstrap_form_for :user do |f| %>
+    <%= f.text_field :email, placeholder: "Enter Your Email", icon: "user" %>
+    <%= f.password_field :password, placeholder: "Enter Your Password", icon: 'lock' %>
+    <%= f.submit "Login" %>
+  <% end %>
+
+
+
+</div>
