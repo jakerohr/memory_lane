@@ -1,0 +1,20 @@
+.collage {
+  background-image: image_url('plank.jpg');
+  background-size: cover;
+  position: relative;
+
+  img {
+    border-radius: 20px;
+    padding: 10px 0 10px 0;
+    // border: 2px solid darken(red, 40);
+  }
+
+  .p1item5 {
+    color: #FFFFFF;
+    display-text: center;
+    font-family: verdana;
+    font-size: 24px;
+  }
+
+}
+
