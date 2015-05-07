@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: memoryln
+  api_key: '487796539979957'
+  api_secret: VCLAahwDu2O02_gIHwyQpU8UreQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: memoryln
+  api_key: '487796539979957'
+  api_secret: VCLAahwDu2O02_gIHwyQpU8UreQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: memoryln
+  api_key: '487796539979957'
+  api_secret: VCLAahwDu2O02_gIHwyQpU8UreQ
+  enhance_image_tag: true
+  static_image_support: false

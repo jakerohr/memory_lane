@@ -4,3 +4,14 @@
 <!-- This is the test partial, feel free to use it however you like -->
 <%= render 'partials/test_partial' %>
 <%= render 'partials/partial_mockup' %>
+
+<a href="#" id="upload_widget_opener">Upload multiple images</a>
+
+<script type="text/javascript">
+  document.getElementById("upload_widget_opener").addEventListener("click", function() {
+
+    cloudinary.openUploadWidget({ cloud_name: 'memoryln', upload_preset: 'a5vxnzbp'},
+      function(error, result) { console.log(error, result) });
+
+  }, false);
+</script>
