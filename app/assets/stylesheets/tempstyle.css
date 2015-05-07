@@ -1,3 +1,13 @@
+img {
+  vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .pointer:hover {
   cursor:pointer;
 }
@@ -8,6 +18,7 @@
 
 .image-fit {
   width: 100%;
+  height: auto;
 }
 
 .xs-img {
@@ -81,3 +92,27 @@
   height: 1200px;
   overflow: hidden;
 }
+
+.left {
+  text-align: left;
+}
+
+.center {
+  margin: auto;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+.third {
+  width: 33vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.vert-align {
+  vertical-align: middle
+}
+
