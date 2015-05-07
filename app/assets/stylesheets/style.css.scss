@@ -1,6 +1,7 @@
 .collage {
   background-image: image_url('plank.jpg');
   background-size: cover;
+  position: relative;
 
   img {
     border-radius: 20px;
