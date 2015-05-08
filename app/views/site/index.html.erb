@@ -1,8 +1,8 @@
 
 <!-- Put Partial Code Below -->
 
-<!-- This is the test partial, feel free to use it however you like -->
-<%= render 'partials/three_images' %>
-<%= render 'partials/two_for_two' %>
-<%= render 'partials/partial_collage' %>
-<%= render 'cloudinary/upload_test' %>
+
+<% @order.each_index do |e| %>
+  <%= render "#{@partials[e][:path]}" %>
+
+<% end %>
