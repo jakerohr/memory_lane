@@ -18,3 +18,17 @@
 
 }
 
+.featured {
+  background-image: image_url('green_floralBackground.jpg');
+  background-size: cover;
+
+
+    img {
+    border-radius: 20px;
+    padding: 10px 0 10px 0;
+    // border: 2px solid darken(red, 40);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+}
+
