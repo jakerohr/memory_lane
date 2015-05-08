@@ -45,7 +45,36 @@ user.partials << partial8
 user.partials << partial9
 user.partials << partial10
 
-
+p1 = PagesPartial.find_by_partial_id(1)
+p1.partial_order = 0
+p1.save
+p2 = PagesPartial.find_by_partial_id(2)
+p2.partial_order = 1
+p2.save
+p3 = PagesPartial.find_by_partial_id(3)
+p3.partial_order = 2
+p3.save
+p4 = PagesPartial.find_by_partial_id(4)
+p4.partial_order = 3
+p4.save
+p5 = PagesPartial.find_by_partial_id(5)
+p5.partial_order = 4
+p5.save
+p6 = PagesPartial.find_by_partial_id(6)
+p6.partial_order = 5
+p6.save
+p7 = PagesPartial.find_by_partial_id(7)
+p7.partial_order = 6
+p7.save
+p8 = PagesPartial.find_by_partial_id(8)
+p8.partial_order = 7
+p8.save
+p9 = PagesPartial.find_by_partial_id(9)
+p9.partial_order = 8
+p9.save
+p10 = PagesPartial.find_by_partial_id(10)
+p10.partial_order = 9
+p10.save
 
 
 
