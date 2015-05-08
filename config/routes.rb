@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # SIGNUP
   post 'signup' => 'users#create'
 
+  # PAGES routes
+  resources :pages
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

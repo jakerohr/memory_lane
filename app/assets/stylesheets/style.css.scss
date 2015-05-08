@@ -1,7 +1,9 @@
 .collage {
-  background-image: image_url('plank.jpg');
+  background-image: image_url('plankBackground.jpg');
   background-size: cover;
   position: relative;
+  width:100%;
+  overflow: hidden;
 
   img {
     border-radius: 20px;
@@ -17,4 +19,61 @@
   }
 
 }
+
+.featured {
+  background-image: image_url('greenFloralBackground.jpg');
+  background-size: cover;
+  overflow: hidden;
+
+
+    img {
+    border-radius: 20px;
+    padding: 10px 0 10px 0;
+    // border: 2px solid darken(red, 40);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+}
+
+.threes {
+    background-image: image_url('redBackground.png');
+    background-size: cover;
+    overflow: hidden;
+
+    img {
+    border-radius: 20px;
+    padding: 10px 0 10px 0;
+    // border: 2px solid darken(red, 40);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+  }
+}
+
+.circle {
+    background-image: image_url('cloverBackground.png');
+    background-size: cover;
+    overflow: hidden;
+
+    img {
+    border-radius: 50%;
+    padding: 10px 0 10px 0;
+  }
+}
+
+.rollin {
+    background-image: image_url('beigeBackground.png');
+    background-size: cover;
+    overflow: hidden;
+
+    img {
+    padding: 10px 0 10px 0;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+  }
+}
+
+
+
+
+
 
