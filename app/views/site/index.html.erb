@@ -5,7 +5,7 @@
 
 
 <% @order.each_index do |e| %>
-  <%= render "#{@partials[e][:path]}" %>
+  <%= render "partials/#{@partials[e][:path]}" %>
 
 <% end %>
 
