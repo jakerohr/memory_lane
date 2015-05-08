@@ -15,7 +15,7 @@ class SiteController < ApplicationController
   end
 
   def show
-    is_authenticated?
+
   end
 
   private
