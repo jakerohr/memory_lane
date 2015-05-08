@@ -3,13 +3,9 @@
 
 <!-- This is the test partial, feel free to use it however you like -->
 
-<%= render 'partials/partial_featured' %>
 
-<%= render 'partials/three_images' %>
+<% @order.each_index do |e| %>
+  <%= render "#{@partials[e][:path]}" %>
 
-<%= render 'partials/two_for_two' %>
-<%= render 'partials/partial_collage' %>
-<%= render 'partials/partial_threes' %>
-<%= render 'partials/partial_circle' %>
-<%= render 'partials/partial_rollin' %>
-<%= render 'cloudinary/upload_test' %>
+<% end %>
+
