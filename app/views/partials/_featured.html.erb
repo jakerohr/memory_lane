@@ -1,5 +1,6 @@
+<% p = @partials.find { |i| i[:path] == 'featured' } %>
 <div class="row featured">
-<div data-sr='enter top, move 500px, over 3s, reset' >
-    <%= image_tag "babypic2.jpg", class: "img-responsive img-fit" %>
-</div>
+  <div data-sr='enter top, move 500px, over 3s, reset' >
+      <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
+  </div>
 </div>

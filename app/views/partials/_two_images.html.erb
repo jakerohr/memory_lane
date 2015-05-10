@@ -1,10 +1,15 @@
+<% p = @partials.find { |i| i[:path] == 'two_images' } %>
 <div data-sr="enter top, hustle 20px, move 100px, spin -30deg, over 1.0s, scale up 20%, reset" class="row two-for-two">
   <div class="row">
     <div class="col-left-half">
-      <div class="" data-sr="enter right, opacity 0.5, move 600px, spin -150deg, over 3.0s, scale down 30%, reset"><%= image_tag "babypic2.jpg", class: 'img-rounded img-responsive img-fit  vert-align' %></div>
+      <div class="" data-sr="enter right, opacity 0.5, move 600px, spin -150deg, over 3.0s, scale down 30%, reset">
+        <%= image_tag "#{p[:item1]}", class: 'img-rounded img-responsive img-fit  vert-align' %>
+      </div>
     </div>
     <div class="col-right-half">
-      <div class="" data-sr="enter left, opacity 0.5, move 600px, spin 150deg, over 3.0s, scale up 30%, reset"><%= image_tag "babypic2.jpg", class: 'img-rounded img-responsive img-fit  right' %></div>
+      <div class="" data-sr="enter left, opacity 0.5, move 600px, spin 150deg, over 3.0s, scale up 30%, reset">
+        <%= image_tag "#{p[:item2]}", class: 'img-rounded img-responsive img-fit  right' %>
+      </div>
     </div>
   </div>
 </div>
