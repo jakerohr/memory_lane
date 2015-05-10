@@ -20,6 +20,10 @@ class PagesController < ApplicationController
     @page = user.pages.create pages_params
   end
 
+  def update
+  end
+
+
   private
   def pages_params
     params.require(:page).permit(:name)
