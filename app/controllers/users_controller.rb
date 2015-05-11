@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
    if @user['id'].nil?
       flash[:danger] = "Error trying to create new login"
-      render :new
+      redirect_to root_path
     else
       flash[:success] = "Account Creation Successful!"
       redirect_to login_path
