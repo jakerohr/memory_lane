@@ -1,13 +1,20 @@
+<% p = @partials.find { |i| i[:path] == 'three_images' } %>
 <div data-sr="enter left, hustle 20px, move 100px, spin -30deg, over 1.0s, scale up 20%, reset" class="row two-for-two">
   <div class="row">
     <div class="col-left-third">
-      <div class="" data-sr="enter left, hustle 20px, move 600px, spin -150deg, over 3.0s, scale down 30%, reset, wait 1.0s"><%= image_tag "babypic2.jpg", class: 'img-rounded img-responsive img-fit  vert-align' %></div>
+      <div class="" data-sr="enter left, hustle 20px, move 600px, spin -150deg, over 3.0s, scale down 30%, reset, wait 1.0s">
+        <%= image_tag "#{p[:item1]}", class: 'img-rounded img-responsive img-fit  vert-align' %>
+      </div>
     </div>
     <div class="col-center-third">
-      <div class="" data-sr="enter bottom, hustle 20px, move 600px, over 3.0s, scale up 30%, reset"><%= image_tag "babypic1.jpg", class: 'img-responsive image-fit' %></div>
+      <div class="" data-sr="enter bottom, hustle 20px, move 600px, over 3.0s, scale up 30%, reset">
+        <%= image_tag "#{p[:item2]}", class: 'img-responsive image-fit' %>
+      </div>
     </div>
     <div class="col-right-third">
-      <div class="" data-sr="enter right, hustle 20px, move 600px, spin 150deg, over 3.0s, scale up 30%, reset, wait 1.0s"><%= image_tag "babypic2.jpg", class: 'img-rounded img-responsive img-fit  right' %></div>
+      <div class="" data-sr="enter right, hustle 20px, move 600px, spin 150deg, over 3.0s, scale up 30%, reset, wait 1.0s">
+        <%= image_tag "#{p[:item3]}", class: 'img-rounded img-responsive img-fit  right' %>
+      </div>
     </div>
   </div>
 </div>
