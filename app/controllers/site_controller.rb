@@ -11,7 +11,7 @@ class SiteController < ApplicationController
     end
     @order = @order.sort_by { |hsh| hsh[:partial_order]}
     @partials = page.partials
-    # render :json => @order
+    # render :json => @partials
   end
 
   def show

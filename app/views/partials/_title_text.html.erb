@@ -1,6 +1,9 @@
+<% p = @partials.find { |i| i[:path] == 'title_text' } %>
 <div class="row block">
   <div class='centered'>
-    <h1 data-sr="enter top, hustle 20px, move 300px, over 3.0s, scale up 40%, opacity 0.1, reset">Title of Slide Show</h1>
+    <h1 data-sr="enter top, hustle 20px, move 300px, over 3.0s, scale up 40%, opacity 0.1, reset">
+      <%= p[:item1] %>
+    </h1>
     <br>
     <h2 data-sr="enter top, hustle 20px, move 300px, over 3.0s, scale up 40%, opacity 0.0, reset, wait 1.0s">
       &darr;
