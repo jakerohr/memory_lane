@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def index
   end
 
-  def new
+  def edit
     @page = Page.new
     page = Page.find_by_user_id(1)
     # @order = PagesPartial.all.map  do |e|
@@ -12,7 +12,8 @@ class PagesController < ApplicationController
     #   end
     # end
     # @order = @order.sort_by { |hsh| hsh[:partial_order]}
-    @partials = page.pages_partials.sort_by{|p| p.partial_order}
+    @partials = page.pages_partials.order(partial_order: 'asc')
+    #.sort_by{|p| p.partial_order}
   end
 
   def create

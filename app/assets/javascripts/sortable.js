@@ -25,7 +25,7 @@ $(function(){
       var sorted = $(this).sortable('serialize');
       // console.log(sorted);
       $.ajax({
-        url: '/pages/new',
+        url: '/pages/edit',
         method: 'put',
         data: sorted,
         complete: function(data){
