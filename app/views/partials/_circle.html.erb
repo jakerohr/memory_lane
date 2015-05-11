@@ -1,15 +1,11 @@
-<% #p = @partials.find { |i| i[:path] == 'circle' } %>
 
 <div class="row circle">
   <div class="col-md-4" data-sr='enter right, flip -90deg, over 3s, reset'class="col-md-4 p1item1" >
-    <%= form_for @partial do |f| %>
-    <% #= form_for :partials, url: "partials/#{p[:id]}", method: "PATCH" do |f| %>
-    <= f.hidden_field :item1, value:"http://www.blah.com/blah.jpg" %>
-    <%= f.hidden_field :item, value: "item1" %>
-      <a href="#" class="upload_widget_opener" data-idx="1">
+
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
         <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
       </a>
-    <% end %>
+
   </div>
   <div class="col-md-4" data-sr='enter top, flip -90deg, over 3s, reset'class="col-md-4 p1item1" >
     <h1>
@@ -17,13 +13,11 @@
     </h1>
   </div>
   <div class="col-md-4" data-sr='enter right, flip -90deg, over 3s, reset'class="col-md-4 p1item1" >
-    <%= form_for :partials, url: "partials/#{p[:id]}", method: "PATCH" do |f| %>
-    <%= f.hidden_field :id, value: "#{p[:id]}" %>
-    <%= f.hidden_field :item, value: "item3" %>
-      <a href="#" class="upload_widget_opener" data-idx="3">
+
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="3">
         <%= image_tag "#{p[:item3]}", class: "img-responsive img-fit" %>
       </a>
-    <% end %>
+
   </div>
 </div>
 

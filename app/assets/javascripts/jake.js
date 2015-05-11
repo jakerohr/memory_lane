@@ -32,10 +32,15 @@ data:{
       var url = result[0].secure_url
       var form = thisWidget.closest("form")
       //find and set hidden field
+    var data = {partial:{}};
+    data.partial['item'+thisWidget.data('item')]=result[0].secure_url;
     $.ajax({
-      url:form.attr('action'),
-      method:form.attr('method'),
-      data:{form:form.serialize(),url:url}
+      url:'/partials/'+thisWidget.data('idx'),
+      method:'PATCH',
+      data:data,
+      headers: {
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      }
     }).done(function(data) {
 
       console.log(data);
