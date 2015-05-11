@@ -2,14 +2,14 @@
   <div col="row">
     <ul id="list1" class="pageSort">
         <% @partials.each do |p| %>
-        <li><%= p.name %></li>
+        <li><%= p.partial.name %></li>
         <% end %>
     </div>
   </div>
 
   <ul id="list2" class="pageSort">
     <% @order.each_index do |e| %>
-    <li><%= render "partials/#{@partials[e][:path]}" %></li>
+    <li><%= render "partials/#{@partials[e][:path]}", locals => {p: e.partial} %></li>
 
     <% end %>
 
