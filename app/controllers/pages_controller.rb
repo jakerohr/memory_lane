@@ -3,8 +3,10 @@ class PagesController < ApplicationController
   def index
   end
 
-  def new
+  def edit
     @page = Page.new
+    page = Page.find_by_user_id(1)
+    @partials = page.pages_partials.order(partial_order: 'asc')
   end
 
   def create
@@ -68,6 +70,14 @@ class PagesController < ApplicationController
   # end
 
 
+  def update
+    partials_array = params[:partial]
+
+    partials_array.each_with_index do |item,index|
+      PagesPartial.find_by_partial_id(item).update(partial_order: index)
+    end
+    render json: partials_array
+  end
 
   private
   def pages_params

@@ -29,7 +29,6 @@
     img {
     border-radius: 20px;
     padding: 10px 0 10px 0;
-    // border: 2px solid darken(red, 40);
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
   }
@@ -43,7 +42,6 @@
     img {
     border-radius: 20px;
     padding: 10px 0 10px 0;
-    // border: 2px solid darken(red, 40);
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
   }
@@ -72,6 +70,9 @@
   }
 }
 
+.pageSort li{
+  list-style-type: none;
+}
 
 
 
