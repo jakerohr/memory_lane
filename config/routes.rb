@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   # PAGES routes
   resources :pages
 
+  # PARTIALS routes
+  resources :partials
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

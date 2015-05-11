@@ -6,6 +6,22 @@ $(function(){
   // gon gem
   // gon.user_id (on controller)
 
+/*
+$('meta[name="csrf-token"]').attr('content')
+
+headers: {
+    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+  },
+data:{
+  partial:{
+    item1:"http://..."
+  }
+}
+// <input name="partial[item1]">
+// params[:partia][:item1]
+// params.require(:partial).
+
+*/
   $(".upload_widget_opener").on("click", function(e) {
     e.preventDefault();
     var thisWidget = $(this);
@@ -13,6 +29,18 @@ $(function(){
     cloudinary.openUploadWidget({ cloud_name: 'memoryln', upload_preset: 'phzbi760', folder: gon.current_user.id, tags: ['page1','partial1','current_user']},
     function(error, result) {
       thisWidget.children('img').attr('src', result[0].secure_url);
+      var url = result[0].secure_url
+      var form = thisWidget.closest("form")
+      //find and set hidden field
+    $.ajax({
+      url:form.attr('action'),
+      method:form.attr('method'),
+      data:{form:form.serialize(),url:url}
+    }).done(function(data) {
+
+      console.log(data);
+    })
+
     });
   });
 
