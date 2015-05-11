@@ -6,13 +6,13 @@ class PagesController < ApplicationController
   def new
     @page = Page.new
     page = Page.find_by_user_id(1)
-    @order = PagesPartial.all.map  do |e|
-      if e.page_id = 1
-        e
-      end
-    end
-    @order = @order.sort_by { |hsh| hsh[:partial_order]}
-    @partials = page.partials
+    # @order = PagesPartial.all.map  do |e|
+    #   if e.page_id = 1
+    #     e
+    #   end
+    # end
+    # @order = @order.sort_by { |hsh| hsh[:partial_order]}
+    @partials = page.pages_partials.sort_by{|p| p.partial_order}
   end
 
   def create
@@ -21,8 +21,13 @@ class PagesController < ApplicationController
   end
 
   def update
-  end
+    partials_array = params[:partial]
 
+    partials_array.each_with_index do |item,index|
+      PagesPartial.find_by_partial_id(item).update(partial_order: index)
+    end
+    render json: partials_array
+  end
 
   private
   def pages_params
