@@ -8,10 +8,12 @@ class User < ActiveRecord::Base
 
   validates :email,
     presence: true,
-    uniqueness: {case_sensitive: false}
+    uniqueness: {case_sensitive: false},
+    email: true
 
   validates :password,
     presence: true,
+    confirmation: true,
     length: { minimum: 6 }
 
   def self.authenticate email,password

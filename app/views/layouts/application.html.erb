@@ -41,9 +41,11 @@
       </button>
       <a class="navbar-brand" href="/">Memory Ln</a>
     </div>
+      <% if @current_user %>
       <ul class="nav navbar-nav">
-      <li><a href="/pages/new" class="">Create</a></li>
-    </ul>
+        <li><a href="/pages/new" class="">Create New Page</a></li>
+      </ul>
+      <% end %>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -52,7 +54,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if @current_user %>
-          <li class="navbar-brand">Have a nice stroll, <%= @current_user.email %></li>
+          <li class="navbar-brand">Have a nice stroll, <%= @current_user.name %></li>
           <li><%= link_to "Logout", logout_path %></li>
         <% else %>
           <li><a class='pointer' data-toggle="modal" data-target="#loginModal">Login</a></li>
@@ -94,9 +96,10 @@
       </div>
       <div class="modal-body">
           <%= bootstrap_form_for :user, url: signup_path  do |f| %>
-            <%= f.text_field :email, placeholder: "Enter Your Email", icon: "user" %>
+            <%= f.text_field :name, placeholder: "What should we call you?", icon: "user" %>
+            <%= f.email_field :email, placeholder: "Enter Your Email", icon: "user" %>
             <%= f.password_field :password, placeholder: "Enter Your Password", icon: 'lock' %>
-            <%= f.password_field :password, placeholder: "Confirm Password", icon: 'lock' %>
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password", icon: 'lock' %>
             <%= f.submit "Login" %>
           <% end %>
       </div>
