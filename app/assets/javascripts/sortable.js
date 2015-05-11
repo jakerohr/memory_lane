@@ -21,6 +21,20 @@ $('.pageSort').sortable({
       $('#'+other+ ' li:eq(' +pre+ ')').insertBefore('#'+other+ ' li:eq(' +post+ ')');
     }
     }
+
+// ajax call
+  // $.ajax({
+  //   url: $(this).attr('href'),
+  //   method:'PUT',
+  //   dataType:'json'
+  // }).done(function(data){
+  //   console.log(data);
+  //   //on success update the DOM
+  //   btn.closest('tr').remove();
+  // }).error(function(err){
+  //   console.log(err);
+  //   alert('Unable to delete item.')
+  // })
 }).disableSelection();
 
 });

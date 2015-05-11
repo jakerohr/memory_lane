@@ -1,19 +1,18 @@
 <div class="container">
-<div col="row">
-<ul id="list1" class="pageSort">
-    <li>Partial 1</li>
-    <li>Partial 2</li>
-    <li>Partial 3</li>
-    <li>Partial 4</li>
-</div>
-</div>
+  <div col="row">
+    <ul id="list1" class="pageSort">
+        <% @partials.each do |p| %>
+        <li><%= p.name %></li>
+        <% end %>
+    </div>
+  </div>
 
-<ul id="list2" class="pageSort">
-  <li><%= render 'partials/partial_featured' %></li>
-  <li><%= render 'partials/two_for_two' %></li>
-  <li><%= render 'partials/partial_mockup' %></li>
-  <li><%= render 'partials/partial_collage' %></li>
+  <ul id="list2" class="pageSort">
+    <% @order.each_index do |e| %>
+    <li><%= render "partials/#{@partials[e][:path]}" %></li>
 
-</div>
+    <% end %>
+
+  </div>
 </div>
 
