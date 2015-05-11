@@ -4,15 +4,13 @@
         <% @partials.each do |p| %>
         <li id="partial_<%=p.partial.id %>"><%= p.partial.name %></li>
         <% end %>
-    </div>
   </div>
+</div>
 
   <ul id="list2" class="pageSort">
     <% @partials.each do |e| %>
-    <li><%= render "partials/#{e.partial.path}" %></li>
+    <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
 
     <% end %>
-
-  </div>
-</div>
+  </ul>
 
