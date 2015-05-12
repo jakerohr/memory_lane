@@ -1,3 +1,24 @@
+.delete-partial-x {
+  background-color: #C7D0D5;
+  color: #93B1C6;
+  padding: 2px 12px;
+  font-size: 2em;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  float: right;
+  margin-left: 1.5%;
+  margin-top: 1%;
+  z-index: 99;
+}
+
+.delete-partial-x:hover {
+  cursor:pointer;
+  background-color: #93B1C6;
+  color: #C7D0D5;
+}
+
+
 .view {
   width: 100vw;
   overflow: hidden;
