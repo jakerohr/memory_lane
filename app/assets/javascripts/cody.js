@@ -7,8 +7,8 @@ $(function(){
     if ( delButton.hasClass('delete-partial-x') ) {
       var partial = $(this).parent('div');
       partial.hide(1000).remove()
-      delButton.parent('li').hide().remove();
-      $('#partial_'+partialId).parent().hide(1000).remove();
+      partial.parent('li').hide().remove();
+      $('#partial_'+partialId).hide(1000).remove();
     } else if ( delButton.hasClass('remove-partial-sidebar') ) {
       var partial = $('#content_partial_'+partialId);
       partial.hide(1000).remove()
