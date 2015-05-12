@@ -6,12 +6,19 @@ class PartialsController < ApplicationController
   def update
     # partial = Partial.find_by_id(params[:form][:id])
     # partial.update(params[:form][:item]:params[:url])
+    item = -1
+    (1..9).each do |i|
+      item = i if params[:partial].key?("item#{i}".to_sym)
+    end
+
     p = Partial.update(params[:id],partial_params)
-    render json: p
+
+    render json: {partial: p, item:item}
   end
 
-  def edit
-    @p = Partial.find_by_id params[:id]
+  def edit_item
+    @p = Partial.find_by_id params[:partial_id]
+    @item = params[:id]
     render layout: false
   end
 
