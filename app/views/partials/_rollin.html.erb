@@ -1,5 +1,5 @@
 <div id='content_partial_<%= p[:id] %>' class="row rollin">
-  <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>">X</div>
+  <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
   <div class="col-md-4" data-sr='enter right, flip -90deg, over 3s, reset' >
     <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
       <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>

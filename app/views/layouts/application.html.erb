@@ -89,7 +89,7 @@
         </div>
         <div class="modal-body">
           <%= bootstrap_form_for :user, url: login_path  do |f| %>
-          <%= f.text_field :email, placeholder: "Enter Your Email", icon: "user" %>
+          <%= f.email_field :email, placeholder: "Enter Your Email", icon: "user" %>
           <%= f.password_field :password, placeholder: "Enter Your Password", icon: 'lock' %>
           <%= f.submit "Login" %>
           <% end %>
