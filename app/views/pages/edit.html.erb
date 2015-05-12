@@ -2,7 +2,10 @@
 <h4 class="sidebarTitle">Choose the order:</h4>
   <ul id="list1" class="pageSort">
     <% @partials.each do |p| %>
-    <li id="partial_<%=p.partial.id %>" class="pointerSidebar"><%= p.partial.name %><span class="glyphicon glyphicon-remove pull-right"></span></li>
+    <li id="partial_<%=p.partial.id %>" class="pointerSidebar">
+      <%= p.partial.name %>
+      <span data-idx="<%= p.partial.id %>" class="glyphicon glyphicon-remove pull-right pointer remove-partial-sidebar"></span>
+    </li>
     <% end %>
   </ul>
 </div>
