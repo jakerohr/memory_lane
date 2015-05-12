@@ -2,6 +2,7 @@
   width: 100vw;
   overflow: hidden;
 }
+
 .pointer:hover {
   cursor:pointer;
 }

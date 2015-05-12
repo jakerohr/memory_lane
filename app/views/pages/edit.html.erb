@@ -1,16 +1,17 @@
-<div class="container">
-  <div col="row">
-    <ul id="list1" class="pageSort">
-        <% @partials.each do |p| %>
-        <li id="partial_<%=p.partial.id %>"><%= p.partial.name %></li>
-        <% end %>
-  </div>
+<div class="sidebar">
+<h4 class="sidebarTitle">Choose the order:</h4>
+  <ul id="list1" class="pageSort">
+    <% @partials.each do |p| %>
+    <li id="partial_<%=p.partial.id %>" class="pointerSidebar"><%= p.partial.name %></li>
+    <% end %>
+  </ul>
 </div>
-
+<div class="content">
   <ul id="list2" class="pageSort">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
 
     <% end %>
   </ul>
+</div>
 
