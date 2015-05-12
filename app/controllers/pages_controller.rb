@@ -3,11 +3,10 @@ class PagesController < ApplicationController
   def index
   end
 
-  # def edit
-  #   @page = Page.new
-  #   page = Page.find_by_user_id(1)
-  #   @partials = page.pages_partials.order(partial_order: 'asc')
-  # end
+  def edit
+    page = Page.find_by_id(params[:id])
+    @partials = page.pages_partials.order(partial_order: 'asc')
+  end
 
   # def create
   #   user = User.find_by_id(params[:id])
@@ -58,9 +57,6 @@ class PagesController < ApplicationController
     end
 
     redirect_to edit_page_path(@page)
-  end
-
-  def edit
   end
 
   def update

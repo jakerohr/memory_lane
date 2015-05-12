@@ -1,8 +1,12 @@
 <div class="row rollin">
   <div class="col-md-4" data-sr='enter right, flip -90deg, over 3s, reset' >
+    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
       <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
+    </a>
   </div>
   <div class="col-md-4" data-sr='enter right, flip -90deg, over 3s, reset' >
+    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="2">
       <%= image_tag "#{p[:item2]}", class: "img-responsive img-fit" %>
+    </a>
   </div>
 </div>

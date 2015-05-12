@@ -12,12 +12,16 @@
         <%= p[:item3] %>
       </h3>
       <div class='lg-square-img' data-sr="enter right, hustle 20px, move 600px, spin -90deg, over 3.0s, scale down 30%, reset">
-        <%= image_tag "#{p[:item4]}", class: 'img-responsive image-fit' %>
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="4">
+          <%= image_tag "#{p[:item4]}", class: 'img-responsive image-fit' %>
+        </a>
       </div>
     </div>
     <div class="col-lg-6">
       <div class="xxl-img" data-sr="enter bottom, hustle 20px, move 600px, spin 150deg, over 3.0s, scale up 30%, reset">
-        <%= image_tag "#{p[:item5]}", class: 'img-rounded img-responsive img-fit'  %></div>
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="5">
+          <%= image_tag "#{p[:item5]}", class: 'img-rounded img-responsive img-fit'  %></div>
+        </a>
     </div>
   </div>
 </div>
