@@ -1,4 +1,4 @@
-.delete-partial-x {
+.delete-partial-x-styling {
   background-color: #C7D0D5;
   color: #93B1C6;
   padding: 2px 12px;
@@ -12,7 +12,7 @@
   z-index: 99;
 }
 
-.delete-partial-x:hover {
+.delete-partial-x-styling:hover {
   cursor:pointer;
   background-color: #93B1C6;
   color: #C7D0D5;
@@ -187,6 +187,7 @@ h1 {
   margin: 20px;
   margin-top: 10%;
   min-height: 50vh;
+  width: 100%;
 }
 
 .block:before {
