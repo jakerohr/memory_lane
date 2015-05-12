@@ -10,6 +10,11 @@ class PartialsController < ApplicationController
     render json: p
   end
 
+  def edit
+    @p = Partial.find_by_id params[:id]
+    render layout: false
+  end
+
   def destroy
     p = Partial.find_by_id(params[:id])
     pages_partial = p.pages_partials.find_by_partial_id(params[:id])
