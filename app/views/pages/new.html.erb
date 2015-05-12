@@ -1,18 +1,11 @@
-<div class="container">
-  <div col="row">
-    <ul id="list1" class="pageSort">
-        <% @partials.each do |p| %>
-        <li><%= p.partial.name %></li>
-        <% end %>
-    </div>
-  </div>
+<div class="col-md-6 col-md-offset-3">
 
-  <ul id="list2" class="pageSort">
-    <% @order.each_index do |e| %>
-    <li><%= render "partials/#{@partials[e][:path]}", locals => {p: e.partial} %></li>
+  <h1>Create New Page</h1>
 
-    <% end %>
+  <%= bootstrap_form_for @page do |f| %>
+    <%= f.text_field :name, placeholder: "Name your new page"%>
+    <%= f.submit "Create" %>
+  <% end %>
 
-  </div>
 </div>
 
