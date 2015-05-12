@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def index
+    @page = Page.find_by_id(params[:id])
   end
 
   def edit
