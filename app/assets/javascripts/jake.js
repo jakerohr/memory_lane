@@ -44,6 +44,8 @@ data:{
     }).done(function(data) {
 
       console.log(data);
+    }).error(function(err){
+      console(err)
     })
 
     });
