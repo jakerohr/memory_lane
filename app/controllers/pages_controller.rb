@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   #   user = User.find_by_id(params[:id])
   #   @page = user.pages.create pages_params
   # end
+
   def new
     @page = Page.new
   end
@@ -21,20 +22,18 @@ class PagesController < ApplicationController
     # and associates it to the current user
     # with page_id = 1 + number of pages
     # current_user has (ie. if they have 0 it will be 1)
-    user = User.find_by_id(current_user)
-    page_number = (current_user.pages.length + 1)
+    last_page = current_user.pages.where.not({page_id:nil}).order(page_id: :asc).last
+    page_number = last_page.nil? ? 0 : last_page.page_id + 1
     @page = Page.create(name: params[:page][:name], page_id: page_number )
-    user.pages << @page
+    current_user.pages << @page
 
-    # render :json => params[:page][:name]
-    # # Copies template page to the current_users
-    # # page.
+    # # Copies template page to the current_users page.
     template_page = User.find_by_id(1).pages.find_by_page_id(0)
-    copy_partials = template_page.partials
+    copy_pages_partials = template_page.pages_partials.order(partial_order: :asc)
 
-    order_number = 0
 
-    copy_partials.each do |copy|
+    copy_pages_partials.each do |pages_partial|
+      copy = pages_partial.partial
       p = Partial.new
       p.path = copy.path
       p.name = copy.name
@@ -48,12 +47,11 @@ class PagesController < ApplicationController
       p.item8 = copy.item8
       p.item9 = copy.item9
       p.save
-      user.partials << p
+      current_user.partials << p
       @page.partials << p
-      pp = PagesPartial.last
-      pp.partial_order = order_number
+      pp = p.pages_partials.last #PagesPartial.last
+      pp.partial_order = pages_partial.partial_order
       pp.save
-      order_number += 1
     end
 
     redirect_to edit_page_path(@page)
