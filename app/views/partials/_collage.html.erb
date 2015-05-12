@@ -1,51 +1,56 @@
-<div class="row collage">
-  <div data-sr='enter left, move 500px, over 3s, reset'class="col-md-4 p1item1">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
-      <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
-    </a>
+<div class="row">
+  <div class="delete-partial-x" data-idx="<%= p[:id] %>">
+    X
   </div>
-  <div data-sr='enter top, move 500px, over 3s, reset'class="col-md-4 p1item2">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="2">
-      <%= image_tag "#{p[:item2]}", class: "img-responsive img-fit"%>
-    </a>
+  <div class="row collage">
+    <div data-sr='enter left, move 500px, over 3s, reset' class="col-md-4 p1item1">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
+        <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
+    <div data-sr='enter top, move 500px, over 3s, reset' class="col-md-4 p1item2">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="2">
+        <%= image_tag "#{p[:item2]}", class: "img-responsive img-fit"%>
+      </a>
+    </div>
+    <div data-sr='enter right, move 500px, over 3s, reset' class="col-md-4 p1item3">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="3">
+        <%= image_tag "#{p[:item3]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
   </div>
-  <div data-sr='enter right, move 500px, over 3s, reset'class="col-md-4 p1item3">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="3">
-      <%= image_tag "#{p[:item3]}", class: "img-responsive img-fit" %>
-    </a>
+  <div class="row collage">
+    <div data-sr='enter left, move 500px, over 3s, reset' class="col-md-4 p1item4">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="4">
+        <%= image_tag "#{p[:item4]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
+    <div data-sr='wait 3s and then ease in 500px, reset' class="col-md-4">
+      <p class="p1item5">
+        <%= p[:item5] %>
+      </p>
+    </div>
+    <div data-sr='enter right, move 500px, over 3s, reset' class="col-md-4 p1item6">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="6">
+        <%= image_tag "#{p[:item6]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
   </div>
-</div>
-<div class="row collage">
-  <div data-sr='enter left, move 500px, over 3s, reset'class="col-md-4 p1item4">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="4">
-      <%= image_tag "#{p[:item4]}", class: "img-responsive img-fit" %>
-    </a>
-  </div>
-  <div data-sr='wait 3s and then ease in 500px, reset'class="col-md-4">
-    <p class="p1item5">
-      <%= p[:item5] %>
-    </p>
-  </div>
-  <div data-sr='enter right, move 500px, over 3s, reset'class="col-md-4 p1item6">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="6">
-      <%= image_tag "#{p[:item6]}", class: "img-responsive img-fit" %>
-    </a>
-  </div>
-</div>
-<div class="row collage">
-  <div data-sr='enter left, move 500px, over 3s, reset'class="col-md-4 p1item4">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="7">
-      <%= image_tag "#{p[:item7]}", class: "img-responsive img-fit" %>
-    </a>
-  </div>
-  <div data-sr='enter bottom, move 500px, over 3s, reset'class="col-md-4 p1item5">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="8">
-      <%= image_tag "#{p[:item8]}", class: "img-responsive img-fit" %>
-    </a>
-  </div>
-  <div data-sr='enter right, move 500px, over 3s, reset'class="col-md-4 p1item6">
-    <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="9">
-      <%= image_tag "#{p[:item9]}", class: "img-responsive img-fit" %>
-    </a>
+  <div class="row collage">
+    <div data-sr='enter left, move 500px, over 3s, reset' class="col-md-4 p1item4">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="7">
+        <%= image_tag "#{p[:item7]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
+    <div data-sr='enter bottom, move 500px, over 3s, reset' class="col-md-4 p1item5">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="8">
+        <%= image_tag "#{p[:item8]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
+    <div data-sr='enter right, move 500px, over 3s, reset' class="col-md-4 p1item6">
+      <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="9">
+        <%= image_tag "#{p[:item9]}", class: "img-responsive img-fit" %>
+      </a>
+    </div>
   </div>
 </div>
