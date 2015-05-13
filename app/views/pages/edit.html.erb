@@ -37,10 +37,11 @@
               <strong><%= p.name %></strong>
             </td>
             <td>
-                <form class="form-inline">
-                <input type="hidden" name="partial_id" value="<%= p.id %>">
-                <button class="add-partial btn btn-primary pull-right">Add</button>
-              </form>
+              <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
+                <%= f.hidden_field :page_id, value: @page.id %>
+                <%= f.hidden_field :partial_id, value: p.id %>
+                <%= f.submit "Add", class: "btn btn-primary pull-right" %>
+              <% end %>
             </td>
           </tr>
         <% end %>
