@@ -11,7 +11,7 @@
   <button data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
 </div>
 
-<div class="content">
+<div class="content fix-width">
   <ul id="list2" class="pageSort edit-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
