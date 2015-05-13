@@ -32,6 +32,11 @@
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
   }
+
+  p {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
 }
 
 .threes {
@@ -209,6 +214,7 @@ ul#list1.pageSort.ui-sortable {
 .create_button {
   background-color: #4b738f;
   color: #FFFFFF;
+  border-radius: 5px;
 }
 
 .page_name {
@@ -221,7 +227,7 @@ li.navbar-brand.currentUser {
 }
 
 li.navbar-brand.currentUser:hover {
-  color: #618DAC;
+  color: #4b738f;
 }
 
 .navbar-default .navbar-nav li a{
@@ -240,10 +246,6 @@ li.navbar-brand.currentUser:hover {
 .navbar-nav li .dropdown-menu {
   background-color: #C7D0D5;
 }
-
-// .navbar-nav li .dropdown-menu:hover {
-//   color: #618DAC;
-// }
 
 .dropdown-menu li a:hover {
   background-color: #E4E8EB;
