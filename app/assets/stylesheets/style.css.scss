@@ -7,7 +7,7 @@
 
   img {
     border-radius: 20px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0px 10px 0;
     // border: 2px solid darken(red, 40);
   }
 
@@ -28,14 +28,13 @@
 
     img {
     border-radius: 20px;
-    padding: 10px 0 10px 0;
+    padding: 50px 50px 40px 10px;
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
   }
 
   p {
     font-size: 20px;
-    padding-bottom: 30px;
   }
 }
 
