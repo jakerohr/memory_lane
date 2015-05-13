@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :pages
 
   # PARTIALS routes
+  get '/partials/:partial_id/item/:id/edit' => 'partials#edit_item', as: 'edit_partial_item'
   resources :partials
 
 

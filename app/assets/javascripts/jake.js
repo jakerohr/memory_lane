@@ -22,6 +22,25 @@ data:{
 // params.require(:partial).
 
 */
+
+  $('#editItemTextModal').on('hidden.bs.modal', function() {
+      $(this).removeData('bs.modal');
+  });
+
+  $('#editItemTextModal').on('submit','form',function(e){
+    e.preventDefault();
+    var form = $(this);
+    $.ajax({
+      url:form.attr('action'),
+      method:form.attr('method'),
+      data:form.serialize()
+    }).done(function(data){
+      // console.log(data);
+      $('#text-partial'+data.partial.id+'-item'+data.item).text(data.partial['item'+data.item]);
+      $('#editItemTextModal').modal('hide');
+    })
+  });
+
   $(".upload_widget_opener").on("click", function(e) {
     e.preventDefault();
     var thisWidget = $(this);
