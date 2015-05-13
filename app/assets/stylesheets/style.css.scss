@@ -147,6 +147,32 @@ ul#list1.pageSort.ui-sortable {
   padding-top: 80px;
 }
 
+.AllPagesTable {
+  width: 50%;
+}
+
+.AllPagesTable td {
+  padding: 15px;
+}
+
+.glyphicon-pencil {
+  font-size: 20px;
+}
+
+.glyphicon-trash {
+  font-size: 20px;
+}
+
+// This is the title of the pages voice
+.allPagesTitle {
+  color: #618dac;
+}
+
+// If a user does not have any pages saved, display this message:
+.noPagesMsg {
+  color: #618dac;
+  font-size: 18px;
+}
 
 
 
