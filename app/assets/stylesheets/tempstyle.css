@@ -4,6 +4,10 @@
   cursor: default;
 }
 
+.edit-partial-list {
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 
 nav ul {
