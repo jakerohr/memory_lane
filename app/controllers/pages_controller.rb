@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def edit
     page = Page.find_by_id(params[:id])
+    @add_partial = User.find_by_id(1).partials
     @partials = page.pages_partials.order(partial_order: 'asc')
   end
 
