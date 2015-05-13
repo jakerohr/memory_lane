@@ -109,6 +109,7 @@ ul#list1.pageSort.ui-sortable {
   margin: 2px 10px;
   background-color: #93B1C6;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
  }
 
 #list1 li:hover{
@@ -126,6 +127,7 @@ ul#list1.pageSort.ui-sortable {
   text-align: center;
   padding-right: 10px;
   font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Brand "Memory Ln"
@@ -137,14 +139,20 @@ ul#list1.pageSort.ui-sortable {
   margin-top: 5px;
 }
 
+.navbar-header .navbar-brand:hover {
+  color: #618DAC;
+}
+
 .navbar {
   background-color: #C7D0D5;
   padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #body {
   background-color: #E4E8EB;
   padding-top: 80px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .AllPagesTable {
@@ -191,6 +199,18 @@ ul#list1.pageSort.ui-sortable {
   text-decoration: none;
   color: lighten(black, 35%);
 }
+
+// This is header of the Create New Page page
+.createNewPageTitle {
+  color: #618DAC;
+  font-size: 39px;
+}
+
+.create_button {
+  color: #618DAC;
+}
+
+
 
 
 
