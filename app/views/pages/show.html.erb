@@ -1,12 +1,5 @@
-
-<!-- Put Partial Code Below -->
-
-<!-- This is the test partial, feel free to use it however you like -->
-
-
   <ul id="list2" class="pageSort show-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
     <% end %>
   </ul>
-

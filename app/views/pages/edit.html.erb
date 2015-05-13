@@ -12,7 +12,7 @@
 </div>
 
 <div class="content">
-  <ul id="list2" class="pageSort">
+  <ul id="list2" class="pageSort edit-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
 

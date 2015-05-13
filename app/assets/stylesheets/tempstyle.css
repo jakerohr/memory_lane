@@ -1,3 +1,11 @@
+.show-partial-list a,
+.show-partial-list img {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+
 nav ul {
   font-size: 1.5em;
 }
@@ -50,11 +58,6 @@ h1 {
 .center-text {
   margin-left: 15%;
 }
-
-.two-for-two {
-  background-color: #00BFFF;
-}
-
 
 .left {
   text-align: left;
