@@ -4,16 +4,7 @@ $(function(){
     var delButton = $(this)
     var partialId = delButton.data('idx');
 
-    if ( delButton.hasClass('delete-partial-x') ) {
-      var partial = $(this).parent('div');
-      partial.hide(1000).remove()
-      partial.parent('li').hide().remove();
-      $('#partial_'+partialId).hide(1000).remove();
-    } else if ( delButton.hasClass('remove-partial-sidebar') ) {
-      var partial = $('#content_partial_'+partialId);
-      partial.hide(1000).remove()
-      delButton.parent().hide(1000).remove();
-    }
+
 
     var data = {partial:{}};
     $.ajax({
@@ -24,29 +15,45 @@ $(function(){
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     }).done(function(data) {
-      partial.remove()
-
+      if ( delButton.hasClass('delete-partial-x') ) {
+        var partial = delButton.parent('div');
+        // partial.hide(1000).remove()
+        partial.parent('li').remove();
+        $('#partial_'+partialId).remove();
+      } else if ( delButton.hasClass('remove-partial-sidebar') ) {
+        var partial = $('#content_partial_'+partialId);
+        // partial.hide(1000).remove()
+        partial.parent('li').remove();
+        delButton.parent().remove();
+      }
       console.log(data);
     }).error(function(err){
       console.log(err)
     })
   })
 
-  $('.add-partial').on('click', function(e){
+  $('.new_partial').on('submit', function(e){
     e.preventDefault();
-
+    var form = $(this)
     var data = {partial:{}};
     $.ajax({
-      url:'/partials/'+delButton.data('idx'),
-      method:'DELETE',
-      data:data,
+      url:form.attr('action'),
+      method:form.attr('method'),
+      data:form.serialize(),
       headers: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }
     }).done(function(data) {
-      partial.remove()
 
-      console.log(data);
+      // var myLi = $('<li>').html(data);
+      // $('#list2').append(myLi);
+      // var pid=999
+      // $('#list1').append('<li id="partial_'+pid+'" class="pointerSidebar">My new partial</li>')
+
+      // console.log(data);
+      $('#newPartialModal').modal('hide');
+      // add loading dialog
+      window.location.reload(true)
     }).error(function(err){
       console.log(err)
     })
