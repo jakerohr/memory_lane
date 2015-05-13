@@ -144,11 +144,34 @@ ul#list1.pageSort.ui-sortable {
 
 #body {
   background-color: #E4E8EB;
+  padding-top: 80px;
 }
 
-a:hover {
-  text-decoration: none;
+// h1.text-edit {
+//   text-decoration:none;
+// }
+
+.text-edit a {
+  color: black;
 }
+
+.text-edit a:link {
+    text-decoration: none;
+}
+
+.text-edit a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.text-edit a:hover {
+  text-decoration: none;
+  color: lighten(black, 35%);
+}
+
+// .text-edit a:visited {
+//   text-decoration: none;
+// }
 
 
 
