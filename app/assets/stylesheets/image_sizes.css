@@ -1,0 +1,113 @@
+.slide-100 {
+  height: 93vh;
+}
+
+.slide-50 {
+  height: 50vh;
+}
+
+/* column widths */
+
+.col-left-third {
+  width: 33.33%;
+  float: left;
+}
+
+.col-center-third {
+  width: 33.33%;
+  display: inline-block;
+}
+
+.col-right-third {
+  width: 33.33%;
+  float: right;
+}
+
+.col-left-half {
+  width: 50%;
+  float: left;
+}
+
+.col-right-half {
+  width: 50%;
+  float: right;
+}
+
+
+/* Image Sizes */
+
+.image-fit {
+  width: 100%;
+}
+
+.xs-img {
+  width: 200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xs-square-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sm-img {
+  width: 350px;
+  height: auto;
+  overflow: hidden;
+}
+
+.sm-square-img {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.md-img {
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.md-square-img {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.lg-img {
+  width: 700px;
+  height: auto;
+  overflow: hidden;
+}
+
+.lg-square-img {
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.xl-img {
+  width: 900px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xl-square-img {
+  width: 900px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.xxl-img {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.xxl-square-img {
+  width: 1200px;
+  height: 1200px;
+  overflow: hidden;
+}
