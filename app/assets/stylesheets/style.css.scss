@@ -144,11 +144,54 @@ ul#list1.pageSort.ui-sortable {
 
 #body {
   background-color: #E4E8EB;
+  padding-top: 80px;
 }
 
-a:hover {
-  text-decoration: none;
+.AllPagesTable {
+  width: 50%;
 }
+
+.AllPagesTable td {
+  padding: 15px;
+}
+
+.glyphicon-pencil {
+  font-size: 20px;
+}
+
+.glyphicon-trash {
+  font-size: 20px;
+}
+
+// This is the title of the pages index
+.allPagesTitle {
+  color: #618dac;
+}
+
+// If a user does not have any pages saved, display this message:
+.noPagesMsg {
+  color: #618dac;
+  font-size: 18px;
+}
+
+.text-edit a {
+  color: black;
+}
+
+.text-edit a:link {
+    text-decoration: none;
+}
+
+.text-edit a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.text-edit a:hover {
+  text-decoration: none;
+  color: lighten(black, 35%);
+}
+
 
 
 

@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 class="allPagesTitle">Your pages:</h2>
+  <hr>
+  <table class="AllPagesTable">
+  <% if @pages.length > 0 %>
+    <% @pages.each do |p| %>
+    <tr>
+      <td><%= p.name.humanize %></td>
+      <td><%= link_to '<i class="glyphicon glyphicon-pencil"></i>'.html_safe, edit_page_path(p) %></td>
+      <td><%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, pages_path(p), method: :delete, data: {confirm: "Are you sure you want to delete this page?"} %></td>
+    </tr>
+    <% end %>
+    <% else %>
+    <p class="noPagesMsg">You currently have no pages. </p>
+    <% end %>
+  </div>
+
