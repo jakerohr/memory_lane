@@ -1,0 +1,25 @@
+<div id='content_partial_<%= p[:id] %>' class="row">
+  <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>">
+    <span class="glyphicon glyphicon-remove"></span>
+  </div>
+
+<!-- content goes here -->
+
+
+        <!-- REFERENCE \/ -->
+      <!-- IMAGES -->
+      <!-- IMAGES MUST BE WRAPPED BY THIS A TAG !!HARD CODE IN DATA-ITEM # !! -->
+      <div class="col-right-half">
+        <div class="" data-sr="enter left, opacity 0.5, move 600px, spin 150deg, over 3.0s, scale up 30%, reset">
+          <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
+            <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
+          </a>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <!-- Number must be the item number in the database -->
+      <!-- class within text tag (p,h1, whatever) must contian "text-edit" -->
+      <%= edit_item_text_link p,2 %>
+
+</div>
