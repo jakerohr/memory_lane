@@ -5,13 +5,13 @@ $(function(){
   $('.pageSort').sortable({
     start:function(event, ui){
       pre = ui.item.index();
-      // console.log("this is the current index of the item I'm dragging:", pre)
+      console.log("this is the current index of the item I'm dragging:", pre)
     },
     stop: function(event,ui){
       lst = $(this).attr('id');
       // console.log("what list is this:", lst)
       post = ui.item.index();
-      // console.log("this is the new index", post)
+      console.log("this is the new index", post)
       other = (lst == 'list1') ? 'list2' : 'list1';
       // console.log("other list?:", other)
 
