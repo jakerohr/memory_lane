@@ -1,9 +1,25 @@
-.slide-100 {
+.edit-partial-list .slide-100 {
   height: 93vh;
+  width: 85vw;
+  overflow: hidden;
 }
 
-.slide-50 {
+.edit-partial-list .slide-50 {
   height: 50vh;
+  width: 85vw;
+  overflow: hidden;
+}
+
+.show-partial-list .slide-100 {
+  height: 93vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.show-partial-list .slide-50 {
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 /* column widths */
