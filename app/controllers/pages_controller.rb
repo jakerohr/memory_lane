@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def index
   end
 
+  def show
+  end
+
   def edit
     @page = Page.find_by_id(params[:id])
     @add_partial = User.find_by_id(1).partials
