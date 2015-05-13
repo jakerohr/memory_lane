@@ -1,9 +1,17 @@
+nav ul {
+  font-size: 1.5em;
+}
+
+nav li {
+  margin-top: 10px;
+}
+
 .delete-partial-x-styling {
   background-color: #C7D0D5;
   color: #93B1C6;
-  padding: 2px 12px;
+  padding: 0px 5px;
   font-size: 2em;
-  border-radius: 100%;
+  border-radius: 50%;
   display: inline-block;
   position: absolute;
   float: right;

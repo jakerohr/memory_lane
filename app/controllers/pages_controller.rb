@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
 
   def index
+    @pages = User.find_by_id(current_user).pages
   end
 
   def edit
     page = Page.find_by_id(params[:id])
+    @add_partial = User.find_by_id(1).partials
     @partials = page.pages_partials.order(partial_order: 'asc')
   end
 
@@ -64,6 +66,19 @@ class PagesController < ApplicationController
       PagesPartial.find_by_partial_id(item).update(partial_order: index)
     end
     render json: partials_array
+  end
+
+  def destroy
+    p = Page.find_by_id(params[:id])
+    pages_partial = p.pages_partials.find_by_page_id(params[:id])
+    partials = p.partials
+
+    if pages_partial
+      p.pages_partials.clear()
+      partials.clear()
+      p.delete
+      redirect_to pages_path
+    end
   end
 
   private
