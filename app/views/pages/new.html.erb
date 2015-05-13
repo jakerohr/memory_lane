@@ -3,8 +3,8 @@
   <h2 class="createNewPageTitle">Create New Page</h2>
 
   <%= bootstrap_form_for @page do |f| %>
-    <%= f.text_field :name, placeholder: "Name your new page"%>
-    <%= f.submit "Create", html: {class: "create_button"}%>
+    <%= f.text_field :name, hide_label: true, placeholder: "Name your new page" %>
+    <%= f.submit "Create", class: "create_button"%>
   <% end %>
 
 </div>

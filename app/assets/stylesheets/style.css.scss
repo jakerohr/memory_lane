@@ -82,7 +82,7 @@
   text-align: center;
   width: auto;
   // border-top-right-radius: 10px;
-  padding-top: 90px;
+  padding-top: 30px;
  }
 
 .content {
@@ -122,7 +122,7 @@ ul#list1.pageSort.ui-sortable {
 }
 
 .sidebarTitle {
-  color: #618dac;
+  color: #4b738f;
   font-style: italic;
   text-align: center;
   padding-right: 10px;
@@ -173,7 +173,7 @@ ul#list1.pageSort.ui-sortable {
 
 // This is the title of the pages index
 .allPagesTitle {
-  color: #618dac;
+  color: #4b738f;
 }
 
 // If a user does not have any pages saved, display this message:
@@ -202,14 +202,52 @@ ul#list1.pageSort.ui-sortable {
 
 // This is header of the Create New Page page
 .createNewPageTitle {
-  color: #618DAC;
+  color: #4b738f;
   font-size: 39px;
 }
 
 .create_button {
+  background-color: #4b738f;
+  color: #FFFFFF;
+}
+
+.page_name {
+  color: #4b738f;
+}
+
+li.navbar-brand.currentUser {
+  color: #4b738f;
+  padding-left: 30px;
+}
+
+li.navbar-brand.currentUser:hover {
   color: #618DAC;
 }
 
+.navbar-default .navbar-nav li a{
+  color: #4b738f;
+}
+
+.navbar-default .navbar-nav li a:hover{
+  color: #618DAC;
+}
+
+.navbar-default .navbar-nav .open a:focus {
+  background-color: #C7D0D5;
+  color: #4b738f;
+}
+
+.navbar-nav li .dropdown-menu {
+  background-color: #C7D0D5;
+}
+
+// .navbar-nav li .dropdown-menu:hover {
+//   color: #618DAC;
+// }
+
+.dropdown-menu li a:hover {
+  background-color: #E4E8EB;
+}
 
 
 
