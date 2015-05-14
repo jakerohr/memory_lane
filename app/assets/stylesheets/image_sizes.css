@@ -1,13 +1,13 @@
 .edit-partial-list .slide-100 {
   height: 93vh;
   width: 85vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .edit-partial-list .slide-50 {
   height: 50vh;
   width: 85vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .show-partial-list .slide-100 {
