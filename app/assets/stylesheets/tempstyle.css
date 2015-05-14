@@ -4,11 +4,25 @@
   cursor: default;
 }
 
-.edit-partial-list {
+.edit-partial-list li {
+  border-bottom: dashed silver 4px;
+}
+/*.edit-partial-list {
   margin-left: 2%;
   margin-right: 2%;
+}*/
+
+.btn-no-style {
+  outline: 0;
+  background: none;
+  border: 0;
+  width: 100%;
 }
 
+.btn-no-style:hover {
+  background-color: #C7D0D5;
+  color: #93B1C6;
+}
 
 nav ul {
   font-size: 1.5em;
@@ -21,8 +35,8 @@ nav li {
 .delete-partial-x-styling {
   background-color: #C7D0D5;
   color: #93B1C6;
-  padding: 0px 5px;
-  font-size: 2em;
+  padding: 6px 7px 0px;
+  font-size: 1.8em;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
