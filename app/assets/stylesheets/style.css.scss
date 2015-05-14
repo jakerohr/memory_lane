@@ -1,30 +1,20 @@
 .collage {
-  background-image: image_url('plankBackground.jpg');
-  background-size: cover;
-  position: relative;
   width:100%;
   overflow: hidden;
 
   img {
     border-radius: 20px;
     padding: 10px 0px 10px 0;
-    // border: 2px solid darken(red, 40);
   }
 
-  .p1item5 {
-    color: #FFFFFF;
-    display-text: center;
-    font-family: verdana;
+  p {
     font-size: 24px;
   }
 
 }
 
 .featured {
-  background-image: image_url('greenFloralBackground.jpg');
-  background-size: cover;
   overflow: hidden;
-
 
     img {
     border-radius: 20px;
@@ -35,12 +25,11 @@
 
   p {
     font-size: 20px;
+    padding: 70px 50px 40px 10px;
   }
 }
 
 .threes {
-    background-image: image_url('redBackground.png');
-    background-size: cover;
     overflow: hidden;
 
     img {
@@ -52,27 +41,35 @@
 }
 
 .circle {
-    background-image: image_url('cloverBackground.png');
-    background-size: cover;
     overflow: hidden;
 
-    img {
-    border-radius: 50%;
-    padding: 10px 0 10px 0;
+  img {
+    margin: 50px 10px 10px 0px;
+    padding: 10px 10px 0px 10px;
+  }
+  h1 {
+    font-size: 40px;
+    padding: 60px 0px 0px 0px;
   }
 }
 
 .rollin {
-    background-image: image_url('beigeBackground.png');
-    background-size: cover;
     overflow: hidden;
 
     img {
-    padding: 10px 0 10px 0;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg);
+    padding: 60px 20px 10px 10px;
   }
 }
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+
 
 .pageSort li{
   list-style-type: none;
@@ -81,12 +78,13 @@
 .sidebar {
   position: fixed;
   width: 200px;
-  height: 100%;
+  height: 87%;
   background-color: #C7D0D5;
   text-align: center;
   width: auto;
   // border-top-right-radius: 10px;
   padding-top: 30px;
+  overflow: scroll;
  }
 
 .content {
@@ -96,6 +94,10 @@
   position: relative;
   overflow: auto;
   z-index: 1;
+}
+
+.add-partial-btn {
+  margin-bottom: 20px;
 }
 
 // Sortable list
@@ -249,7 +251,6 @@ li.navbar-brand.currentUser:hover {
 .dropdown-menu li a:hover {
   background-color: #E4E8EB;
 }
-
 
 
 

@@ -28,10 +28,11 @@
     </li>
     <% end %>
   </ul>
-  <button data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
+  <button class="add-partial-btn" data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
 </div>
 
-<div class="content <%= @current_background.bg_class %>">
+
+<div class="content <%= @current_background.bg_class %> fix-width">
   <ul id="list2" class="pageSort edit-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>

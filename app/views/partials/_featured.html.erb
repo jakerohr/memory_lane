@@ -1,13 +1,14 @@
 <div id='content_partial_<%= p[:id] %>' class="row featured slide-100">
-    <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
+  <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
   <div class="col-right-half">
     <div data-sr='enter top, move 500px, over 2s, reset' >
       <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
-        <%= image_tag "#{p[:item1]}", class: "img-responsive img-fit" %>
+        <%= image_tag "#{p[:item1]}", class: "img-responsive image-fit lg-img" %>
       </a>
     </div>
   </div>
+
   <div class="col-left-half text-center" data-sr='fade in, over 2s, reset'>
-  <p class="text-edit"><%= edit_item_text_link p,2 %></p>
+    <p class="text-edit"><%= edit_item_text_link p,2 %></p>
   </div>
 </div>
