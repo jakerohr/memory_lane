@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MemoryLn</title>
+  <title>Memory Ln</title>
   <!-- Gon for passing data to js -->
   <%= include_gon %>
   <!-- Latest compiled and minified CSS & JS -->
@@ -26,9 +26,11 @@
   <%= favicon_link_tag 'favicon.png' %>
   <!-- Partials -->
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- sumo me -->
+  <script src="//load.sumome.com/" data-sumo-site-id="d10af0f2a3ef33f4043416ff3372fbe64824be4ee59f7c16382ab060dd389d5f" async="async"></script>
 </head>
 <body id="body">
 
@@ -120,7 +122,7 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-  <div class="view">
+  <div id="view" class="view">
     <%= render 'layouts/flash' %>
     <%= yield %>
 
