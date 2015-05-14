@@ -13,6 +13,9 @@
 
   end
 
+  def about
+  end
+
   private
   def find_model
     @model = Site.find(params[:id]) if params[:id]
