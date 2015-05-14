@@ -6,13 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# CREATE NEW USER AND PAGES
 user = User.create(email: "template@email.com", password: "12345678", name: "template")
 page = Page.create(page_id: 0, name: "template page")
+home_page = Page.create(page_id: 1, name: "home page")
 
 p user.errors
 p page.errors
 
 user.pages << page
+user.pages << home_page
+
+# TEMPLATE PARTIALS
 partial1 = Partial.create(path: "title_text", name: "Title Text", item1: "Your Title Here")
 partial2 = Partial.create(path: "two_for_three", name: "Two for Three", item1: "Input text here", item2: "And here...", item3: "Or even here!", item4: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item5: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial3 = Partial.create(path: "two_images", name: "Two Images", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
@@ -27,6 +32,7 @@ partial11 = Partial.create(path: "title_text_top", name: "Title Text Top", item1
 partial12 = Partial.create(path: "title_subtitle", name: "Title & Subtitle", item1: "Your Title Here", item2: "...and you can add even more cool text here too!")
 # Text overlay for image upload
 # l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/
+
 
 page.partials << partial1
 page.partials << partial2
@@ -110,3 +116,21 @@ t17 = Background.create(bg_class: 'white-gradiant', bg_name: 'White')
 
 
 t17.pages << page
+
+
+# HOMEPAGE PARTIALS
+
+home1 = Partial.create(path: "title_text", name: "Title Text", item1: "Your Title Here")
+home2 = Partial.create(path: "title_text", name: "Title Text", item1: "Your Title Here")
+
+home_page.partials << home1
+home_page.partials << home2
+
+h1 = PagesPartial.find_by_partial_id(1)
+h1.partial_order = 0
+h1.save
+h2 = PagesPartial.find_by_partial_id(2)
+h2.partial_order = 1
+h2.save
+
+t17.pages << home_page
