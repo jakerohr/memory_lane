@@ -30,6 +30,7 @@ partial9 = Partial.create(path: "collage", name: "Collage", item1: "http://res.c
 partial10 = Partial.create(path: "circle", name: "Circle", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "Look at this craaazzzy text!", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial11 = Partial.create(path: "title_text_top", name: "Title Text Top", item1: "Your Title Here")
 partial12 = Partial.create(path: "title_subtitle", name: "Title & Subtitle", item1: "Your Title Here", item2: "...and you can add even more cool text here too!")
+partial13 = Partial.create(path: "welcome", name: "Welcome", item1: "Welcome", item2: "to", item3: "Memory", item4: "Lane", item5: "(scroll down)")
 # Text overlay for image upload
 # l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/
 
@@ -46,6 +47,7 @@ page.partials << partial9
 page.partials << partial10
 page.partials << partial11
 page.partials << partial12
+page.partials << partial13
 user.partials << partial1
 user.partials << partial2
 user.partials << partial3
@@ -57,7 +59,8 @@ user.partials << partial8
 user.partials << partial9
 user.partials << partial10
 user.partials << partial11
-page.partials << partial12
+user.partials << partial12
+user.partials << partial13
 
 p1 = PagesPartial.find_by_partial_id(1)
 p1.partial_order = 0
@@ -95,6 +98,9 @@ p9.save
 p10 = PagesPartial.find_by_partial_id(10)
 p10.partial_order = 11
 p10.save
+p13 = PagesPartial.find_by_partial_id(13)
+p13.partial_order = 12
+p13.save
 
 t1 = Background.create(bg_class: 'blue-gradiant', bg_name: 'Blue')
 t2 = Background.create(bg_class: 'teal-gradiant', bg_name: 'Teal')
@@ -120,7 +126,7 @@ t17.pages << page
 
 # HOMEPAGE PARTIALS
 
-home1 = Partial.create(path: "title_text", name: "Title Text", item1: "Your Title Here")
+home1 = Partial.create(path: "welcome", name: "Welcome", item1: "Welcome", item2: "to", item3: "Memory", item4: "Lane", item5: "(scroll down)")
 home2 = Partial.create(path: "title_text", name: "Title Text", item1: "Your Title Here")
 
 home_page.partials << home1
