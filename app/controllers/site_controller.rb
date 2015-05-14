@@ -3,7 +3,7 @@
   before_filter :find_model
 
   def index
-    page = Page.find_by_page_id(2)
+    page = Page.find_by_id(2)
     @partials = page.pages_partials.order(partial_order: 'asc')
     @current_background = page.background
     # render :json => @partials
