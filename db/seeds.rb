@@ -8,6 +8,7 @@
 
 # CREATE NEW USER AND PAGES
 user = User.create(email: "template@email.com", password: "12345678", name: "template")
+cody = User.create(email: "codybarrus@gmail.com", password: "testtest", name: "template")
 page = Page.create(page_id: 0, name: "template page")
 home_page = Page.create(page_id: 1, name: "home page")
 new_page = Page.create(page_id: 2, name: "new page model")
@@ -69,46 +70,46 @@ user.partials << partial12
 user.partials << partial13
 user.partials << partial14
 
-p13 = PagesPartial.find_by_partial_id(13)
+p13 = PagesPartial.find_by_id(13)
 p13.partial_order = 0
 p13.save
-p8 = PagesPartial.find_by_partial_id(8)
+p8 = PagesPartial.find_by_id(8)
 p8.partial_order = 1
 p8.save
-p1 = PagesPartial.find_by_partial_id(1)
+p1 = PagesPartial.find_by_id(1)
 p1.partial_order = 2
 p1.save
-p11 = PagesPartial.find_by_partial_id(11)
+p11 = PagesPartial.find_by_id(11)
 p11.partial_order = 3
 p11.save
-p12 = PagesPartial.find_by_partial_id(12)
+p12 = PagesPartial.find_by_id(12)
 p12.partial_order = 4
 p12.save
-p2 = PagesPartial.find_by_partial_id(2)
+p2 = PagesPartial.find_by_id(2)
 p2.partial_order = 5
 p2.save
-p3 = PagesPartial.find_by_partial_id(3)
+p3 = PagesPartial.find_by_id(3)
 p3.partial_order = 6
 p3.save
-p4 = PagesPartial.find_by_partial_id(4)
+p4 = PagesPartial.find_by_id(4)
 p4.partial_order = 7
 p4.save
-p5 = PagesPartial.find_by_partial_id(5)
+p5 = PagesPartial.find_by_id(5)
 p5.partial_order = 8
 p5.save
-p6 = PagesPartial.find_by_partial_id(6)
+p6 = PagesPartial.find_by_id(6)
 p6.partial_order = 9
 p6.save
-p7 = PagesPartial.find_by_partial_id(7)
+p7 = PagesPartial.find_by_id(7)
 p7.partial_order = 10
 p7.save
-p9 = PagesPartial.find_by_partial_id(9)
+p9 = PagesPartial.find_by_id(9)
 p9.partial_order = 11
 p9.save
-p10 = PagesPartial.find_by_partial_id(10)
+p10 = PagesPartial.find_by_id(10)
 p10.partial_order = 12
 p10.save
-p14 = PagesPartial.find_by_partial_id(14)
+p14 = PagesPartial.find_by_id(14)
 p14.partial_order = 13
 p14.save
 
@@ -147,21 +148,24 @@ home_page.partials << home2
 user.partials << home1
 user.partials << home2
 
-h1 = PagesPartial.find_by_partial_id(1)
+h1 = PagesPartial.find_by_id(15)
 h1.partial_order = 0
 h1.save
-h2 = PagesPartial.find_by_partial_id(2)
+h2 = PagesPartial.find_by_id(16)
 h2.partial_order = 1
 h2.save
 
-t17.pages << home_page
+t1.pages << home_page
 
 # NEW PAGE
 new_page.partials << partial13
 new_page.partials << partial8
-n13 = PagesPartial.find_by_partial_id(13)
-n13.partial_order = 0
-n13.save
-n8 = PagesPartial.find_by_partial_id(8)
-n8.partial_order = 1
-n8.save
+user.partials << partial13
+user.partials << partial8
+
+n1 = PagesPartial.find_by_id(17)
+n1.partial_order = 0
+n1.save
+n2 = PagesPartial.find_by_id(18)
+n2.partial_order = 1
+n2.save

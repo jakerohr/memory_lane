@@ -70,7 +70,6 @@ class PagesController < ApplicationController
   end
 
   def update
-    is_authenticated?
     p params
     if params[:partial]
       partials_array = params[:partial]
