@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     @backgrounds = Background.all
     @page = Page.find_by_id(params[:id])
     @current_background = @page.background
-    @add_partial = User.find_by_id(1).partials
+    @add_partial = Page.find_by_id(1).partials
     @partials = @page.pages_partials.order(partial_order: 'asc')
     @partial = Partial.new
   end
