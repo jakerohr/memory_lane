@@ -1,9 +1,8 @@
 <div class="sidebar">
-<p><%= link_to "Preview Page", @page %>
 <h4 class="sidebarTitle">Choose background:</h4>
   <div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Backgrounds
+    <%= @current_background.bg_name %>
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -29,10 +28,11 @@
     <% end %>
   </ul>
   <button class="add-partial-btn" data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
+  <hr>
+  <h3><%= link_to "Preview Page", @page %></h3>
 </div>
 
 <!-- Render view -->
-<div>
 <div class="content <%= @current_background.bg_class %> fix-width">
   <ul id="list2" class="pageSort edit-partial-list">
     <% @partials.each do |e| %>

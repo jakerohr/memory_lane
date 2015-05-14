@@ -95,5 +95,6 @@ t13 = Background.create(bg_class: 'pink-gradiant', bg_name: 'Pink')
 t14 = Background.create(bg_class: 'steel-blue-gradiant', bg_name: 'Steel Blue')
 t15 = Background.create(bg_class: 'forest-green-gradiant', bg_name: 'Forest Green')
 t16 = Background.create(bg_class: 'hot-pink-gradiant', bg_name: 'Hot Pink')
+t17 = Background.create(bg_class: 'white-gradiant', bg_name: 'White')
 
 t1.pages << page
