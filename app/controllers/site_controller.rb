@@ -6,7 +6,7 @@
 
     page = Page.find_by_user_id(1)
     @partials = page.pages_partials.order(partial_order: 'asc')
-
+    @current_background = page.background
     # render :json => @partials
   end
 

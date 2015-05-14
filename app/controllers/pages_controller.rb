@@ -4,10 +4,16 @@ class PagesController < ApplicationController
   end
 
   def show
+    page = Page.find_by_id(params[:id])
+    @current_background = page.background
+    @partials = page.pages_partials.order(partial_order: 'asc')
+    # render :json => params
   end
 
   def edit
+    @backgrounds = Background.all
     @page = Page.find_by_id(params[:id])
+    @current_background = @page.background
     @add_partial = User.find_by_id(1).partials
     @partials = @page.pages_partials.order(partial_order: 'asc')
     @partial = Partial.new
@@ -31,7 +37,8 @@ class PagesController < ApplicationController
     page_number = last_page.nil? ? 0 : last_page.page_id + 1
     @page = Page.create(name: params[:page][:name], page_id: page_number )
     current_user.pages << @page
-
+    @background = Background.first
+    @background.pages << @page
     # # Copies template page to the current_users page.
     template_page = User.find_by_id(1).pages.find_by_page_id(0)
     copy_pages_partials = template_page.pages_partials.order(partial_order: :asc)
@@ -63,17 +70,25 @@ class PagesController < ApplicationController
   end
 
   def update
-    partials_array = params[:partial]
 
-    partials_array.each_with_index do |item,index|
-      PagesPartial.find_by_partial_id(item).update(partial_order: index)
+    if pages_params[:background_id]
+      @background = Background.find_by_id(pages_params[:background_id])
+      @page = Page.find_by_id(params[:id])
+      @background.pages << @page
+      redirect_to edit_page_path(@page)
+    else
+      partials_array = params[:partial]
+
+      partials_array.each_with_index do |item,index|
+        PagesPartial.find_by_partial_id(item).update(partial_order: index)
+      end
+    # render json: partials_array
     end
-    render json: partials_array
   end
 
   private
   def pages_params
-    params.require(:page).permit(:name)
+    params.require(:page).permit(:name,:background_id)
   end
 
 

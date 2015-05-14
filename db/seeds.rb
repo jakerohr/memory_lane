@@ -79,5 +79,21 @@ p10 = PagesPartial.find_by_partial_id(10)
 p10.partial_order = 9
 p10.save
 
+t1 = Background.create(bg_class: 'blue-gradiant', bg_name: 'Blue')
+t2 = Background.create(bg_class: 'teal-gradiant', bg_name: 'Teal')
+t3 = Background.create(bg_class: 'baby-blue-gradiant', bg_name: 'Baby Blue')
+t4 = Background.create(bg_class: 'lime-green-gradiant', bg_name: 'Lime Green')
+t5 = Background.create(bg_class: 'black-gradiant', bg_name: 'Black')
+t6 = Background.create(bg_class: 'rust-gradiant', bg_name: 'Rust')
+t7 = Background.create(bg_class: 'green-gradiant', bg_name: 'Green')
+t8 = Background.create(bg_class: 'silver-gradiant', bg_name: 'Silver')
+t9 = Background.create(bg_class: 'gold-gradiant', bg_name: 'Gold')
+t10 = Background.create(bg_class: 'red-gradiant', bg_name: 'Red')
+t11 = Background.create(bg_class: 'midnight-gradiant', bg_name: 'Midnight')
+t12 = Background.create(bg_class: 'purple-gradiant', bg_name: 'Purple')
+t13 = Background.create(bg_class: 'pink-gradiant', bg_name: 'Pink')
+t14 = Background.create(bg_class: 'steel-blue-gradiant', bg_name: 'Steel Blue')
+t15 = Background.create(bg_class: 'forest-green-gradiant', bg_name: 'Forest Green')
+t16 = Background.create(bg_class: 'hot-pink-gradiant', bg_name: 'Hot Pink')
 
-
+t1.pages << page
