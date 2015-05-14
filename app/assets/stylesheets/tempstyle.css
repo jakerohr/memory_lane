@@ -97,10 +97,10 @@ h1 {
   overflow: hidden;
 }
 
-.vert-align {
+/*.vert-align {
   vertical-align: middle
 }
-
+*/
 /* Partial Customization */
 
 .text-from-top {
@@ -124,8 +124,8 @@ h1 {
   margin-right: -0.25em; /* Adjusts for spacing */
  }
 
-.centered {
+/*.centered {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 15px;
- }
+ }*/
