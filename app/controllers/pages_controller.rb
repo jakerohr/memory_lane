@@ -71,6 +71,7 @@ class PagesController < ApplicationController
   end
 
   def update
+
     p params
     if params[:partial]
       partials_array = params[:partial]
@@ -78,6 +79,7 @@ class PagesController < ApplicationController
       partials_array.each_with_index do |item,index|
         PagesPartial.find_by_partial_id(item).update(partial_order: index)
       end
+
       render json: partials_array
     else
       @background = Background.find_by_id(pages_params[:background_id])
@@ -85,7 +87,7 @@ class PagesController < ApplicationController
       @background.pages << @page
       redirect_to edit_page_path(@page)
     end
-  end
+    end
 
   private
   def pages_params
