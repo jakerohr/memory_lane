@@ -71,7 +71,6 @@
               <li><%= link_to "View all", pages_path %></li>
             </ul>
           </li>
-          <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Logout", logout_path %></li>
           <% else %>
           <li><a class='pointer' data-toggle="modal" data-target="#loginModal">Login</a></li>
@@ -80,6 +79,15 @@
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+  </nav>
+
+  <!-- footer -->
+  <nav class="navbar navbar-default navbar-bottom" role="navigation">
+    <div class="container">
+    <br>
+    &copy; 2015 Memory Ln
+      <%= link_to "About", about_path %>
+    </div>
   </nav>
 
   <!-- Login Modal -->

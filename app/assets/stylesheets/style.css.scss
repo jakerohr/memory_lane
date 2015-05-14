@@ -256,10 +256,25 @@ li.navbar-brand.currentUser:hover {
   color: #4b738f;
   font-style: italic;
 }
+
+.aboutPage {
+  img {
+    border: 2px #E4E8EB;
+  }
+}
 // Jake's styles
 
 .big-text {
   font-size: 150px;
+}
+
+// Footer
+.footer {
+  text-align: center;
+
+  .aboutText {
+    text-align: right;
+  }
 }
 
 .vertical-center {
