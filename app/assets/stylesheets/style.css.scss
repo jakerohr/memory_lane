@@ -96,7 +96,12 @@ ul#list1.pageSort.ui-sortable {
   padding: 0px;
 }
 
-#list1 li {
+#newPartialModal .modal-content {
+  background-color: #C7D0D5;
+}
+
+#list1 li,
+.partial-modal-button {
   color: #F5F5F5;
   font-weight: bolder;
   border: solid 2px #F5F5F5;
