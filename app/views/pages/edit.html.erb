@@ -65,7 +65,7 @@
               <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
                 <%= f.hidden_field :page_id, value: @page.id %>
                 <%= f.hidden_field :partial_id, value: p.id %>
-                <%= f.submit "Add", class: "partial-modal-button" %>
+                <%= f.submit "Add", class: "new_partial partial-modal-button" %>
               <% end %>
             </td>
           <% elsif i.odd? %>
@@ -76,7 +76,7 @@
               <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
                 <%= f.hidden_field :page_id, value: @page.id %>
                 <%= f.hidden_field :partial_id, value: p.id %>
-                <%= f.submit "Add", class: "partial-modal-button" %>
+                <%= f.submit "Add", class: "new_partial partial-modal-button" %>
               <% end %>
             </td>
           </tr>
