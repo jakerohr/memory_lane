@@ -86,7 +86,7 @@ class PagesController < ApplicationController
       @background.pages << @page
       redirect_to edit_page_path(@page)
     end
-  end
+    end
 
   private
   def pages_params
