@@ -1,3 +1,6 @@
+.partial-table td {
+  text-align: left;
+}
 
 .show-partial-list a,
 .show-partial-list img {

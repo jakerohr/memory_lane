@@ -52,20 +52,38 @@
         <h4 class="modal-title" id="myModalLabel">Add New Block</h4>
       </div>
       <div class="modal-body">
-        <table>
-        <% @add_partial.each do |p| %>
-          <tr>
-            <td>
+        <table class="table" id='partial-table'>
+        <% @add_partial.each_with_index do |p, i| %>
+          <% if i.even? %>
+          <tr height="40px">
+            <td width="25%">
               <strong><%= p.name %></strong>
             </td>
-            <td>
+            <td width="25%">
               <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
                 <%= f.hidden_field :page_id, value: @page.id %>
                 <%= f.hidden_field :partial_id, value: p.id %>
-                <%= f.submit "Add", class: "btn btn-primary pull-right" %>
+                <%= f.submit "Add", class: "btn btn-primary pull-left" %>
+              <% end %>
+            </td>
+          <% elsif i.odd? %>
+            <td width="25%">
+              <strong><%= p.name %></strong>
+            </td>
+            <td width="25%">
+              <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
+                <%= f.hidden_field :page_id, value: @page.id %>
+                <%= f.hidden_field :partial_id, value: p.id %>
+                <%= f.submit "Add", class: "btn btn-primary  pull-left" %>
               <% end %>
             </td>
           </tr>
+          <% end %>
+          <% if i == @add_partial.size - 1 %>
+            <% if i.even? %>
+              </tr>
+              <% end %>
+          <% end %>
         <% end %>
         </table>
       </div>

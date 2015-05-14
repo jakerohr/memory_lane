@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def index
+    is_authenticated?
     @pages = current_user.pages
   end
 
@@ -12,6 +13,7 @@ class PagesController < ApplicationController
   end
 
   def edit
+    is_authenticated?
     @backgrounds = Background.all
     @page = Page.find_by_id(params[:id])
     @current_background = @page.background
@@ -20,16 +22,13 @@ class PagesController < ApplicationController
     @partial = Partial.new
   end
 
-  # def create
-  #   user = User.find_by_id(params[:id])
-  #   @page = user.pages.create pages_params
-  # end
-
   def new
+    is_authenticated?
     @page = Page.new
   end
 
   def create
+    is_authenticated?
     # Creates new page in the DB
     # and associates it to the current user
     # with page_id = 1 + number of pages
@@ -41,7 +40,7 @@ class PagesController < ApplicationController
     @background = Background.first
     @background.pages << @page
     # # Copies template page to the current_users page.
-    template_page = User.find_by_id(1).pages.find_by_page_id(0)
+    template_page = User.find_by_id(1).pages.find_by_id(3)
     copy_pages_partials = template_page.pages_partials.order(partial_order: :asc)
 
 
@@ -71,7 +70,7 @@ class PagesController < ApplicationController
   end
 
   def update
-
+    is_authenticated?
     p params
     if params[:partial]
       partials_array = params[:partial]
