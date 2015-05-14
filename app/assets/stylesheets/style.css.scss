@@ -68,12 +68,13 @@
 .sidebar {
   position: fixed;
   width: 200px;
-  height: 100%;
+  height: 87%;
   background-color: #C7D0D5;
   text-align: center;
   width: auto;
   // border-top-right-radius: 10px;
   padding-top: 30px;
+  overflow: scroll;
  }
 
 .content {
@@ -83,6 +84,10 @@
   position: relative;
   overflow: auto;
   z-index: 1;
+}
+
+.add-partial-btn {
+  margin-bottom: 20px;
 }
 
 // Sortable list
@@ -236,7 +241,6 @@ li.navbar-brand.currentUser:hover {
 .dropdown-menu li a:hover {
   background-color: #E4E8EB;
 }
-
 
 
 

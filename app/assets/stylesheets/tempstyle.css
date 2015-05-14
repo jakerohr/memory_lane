@@ -1,9 +1,14 @@
+
 .show-partial-list a,
 .show-partial-list img {
   pointer-events: none;
   cursor: default;
 }
 
+.edit-partial-list {
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 
 nav ul {
