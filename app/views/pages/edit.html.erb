@@ -1,4 +1,24 @@
 <div class="sidebar">
+<p><%= link_to "Preview Page", @page %>
+<h4 class="sidebarTitle">Choose background:</h4>
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Backgrounds
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <% @backgrounds.each do |b| %>
+      <li role="background">
+        <%= form_for @page, method: "PATCH", class: "form-inline" do |f| %>
+          <%= f.hidden_field :page_id, value: @page.id %>
+          <%= f.hidden_field :background_id, value: b.id %>
+          <%= f.submit "#{b.bg_name}", class: "btn-no-style" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<hr>
 <h4 class="sidebarTitle">Choose the order:</h4>
   <ul id="list1" class="pageSort">
     <% @partials.each do |p| %>
@@ -11,7 +31,8 @@
   <button class="add-partial-btn" data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
 </div>
 
-<div class="content fix-width">
+
+<div class="content <%= @current_background.bg_class %> fix-width">
   <ul id="list2" class="pageSort edit-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>

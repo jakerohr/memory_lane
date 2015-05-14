@@ -1,4 +1,4 @@
-<div id='content_partial_<%= p[:id] %>' data-sr="enter left, hustle 20px, move 100px, spin -30deg, over 1.0s, scale up 20%, reset" class="row two-for-two slide-100">
+<div id='content_partial_<%= p[:id] %>' class="row two-for-two slide-100">
   <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
   <div class="row">
   <!--   <div class="col-left-third">
@@ -9,11 +9,11 @@
       </div>
     </div> -->
     <div class="col-md-4 col-md-offset-4">
-      <div class="" data-sr="enter bottom, hustle 20px, move 600px, over 3.0s, scale up 30%, reset">
-        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="2">
+      <div class="" data-sr="move 50px, roll 1080deg, over 6s, scale up 100%, reset">
+        <a href="#" class="upload_widget_opener vertical-center" data-idx="<%= p.id %>" data-item="2">
           <%= image_tag "#{p[:item2]}", class: 'img-responsive image-fit' %>
         </a>
-      </div>
+      <!-- </div> -->
     </div>
     <!-- <div class="col-right-third">
       <div class="" data-sr="enter right, hustle 20px, move 600px, spin 150deg, over 3.0s, scale up 30%, reset, wait 1.0s">
@@ -22,5 +22,10 @@
         </a>
       </div>
     </div> -->
+  </div>
+</div>
+<div class="frame-round">
+  <div class="crop">
+    <%= image_tag "#{p[:item2]}", class: 'img-responsive image-fit' %>
   </div>
 </div>

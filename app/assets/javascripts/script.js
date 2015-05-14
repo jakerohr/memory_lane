@@ -1,4 +1,5 @@
- $(function(){
+$(function(){
+  cloudinary.setCloudName('memoryln');
 
   //stop here if it's not the edit page
   if($('.edit-partial-list').length < 1) {
@@ -106,7 +107,6 @@
   })
 
   // set cloud name globally
-  cloudinary.setCloudName('memoryln');
 
   // pass in user_id
   // gon gem
@@ -175,7 +175,7 @@ data:{
 
     });
   });
-
+});
 // call back to add hard coded photo to spot
   //$("#upload_widget_opener").children('img').attr('src', 'http://res.cloudinary.com/memoryln/image/upload/v1431043494/1/zzlbamqfeeqklqcokfe0.jpg');
 
@@ -201,7 +201,3 @@ data:{
   // version: 1431106185
   // width: 850
 
-
-
-
-});
