@@ -18,7 +18,7 @@
   </ul>
 </div>
 <hr>
-<h4 class="sidebarTitle">Choose the order:</h4>
+<h4 class="sidebarTitle">Arrange Blocks:</h4>
   <ul id="list1" class="pageSort">
     <% @partials.each do |p| %>
     <li id="partial_<%=p.partial.id %>" class="pointerSidebar">
@@ -27,6 +27,8 @@
     </li>
     <% end %>
   </ul>
+  <hr>
+  <h4 class="sidebarTitle">Add New Block:</h4>
   <button class="add-partial-btn" data-toggle="modal" data-target="#newPartialModal"><span class="glyphicon glyphicon-plus"></span></button>
   <hr>
   <h3><%= link_to "Share Page", @page %></h3>
@@ -63,7 +65,7 @@
               <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
                 <%= f.hidden_field :page_id, value: @page.id %>
                 <%= f.hidden_field :partial_id, value: p.id %>
-                <%= f.submit "Add", class: "btn btn-primary pull-left" %>
+                <%= f.submit "Add", class: "partial-modal-button" %>
               <% end %>
             </td>
           <% elsif i.odd? %>
@@ -74,7 +76,7 @@
               <%= form_for @partial, url: "/partials", method: "POST", class: "form-inline" do |f| %>
                 <%= f.hidden_field :page_id, value: @page.id %>
                 <%= f.hidden_field :partial_id, value: p.id %>
-                <%= f.submit "Add", class: "btn btn-primary  pull-left" %>
+                <%= f.submit "Add", class: "partial-modal-button" %>
               <% end %>
             </td>
           </tr>
@@ -88,7 +90,7 @@
         </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="partial-modal-button" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
