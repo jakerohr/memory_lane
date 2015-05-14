@@ -41,7 +41,7 @@ class PagesController < ApplicationController
     @background = Background.first
     @background.pages << @page
     # # Copies template page to the current_users page.
-    template_page = User.find_by_id(1).pages.find_by_page_id(0)
+    template_page = User.find_by_id(1).pages.find_by_id(1)
     copy_pages_partials = template_page.pages_partials.order(partial_order: :asc)
 
 
