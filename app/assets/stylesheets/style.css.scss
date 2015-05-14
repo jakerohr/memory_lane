@@ -61,14 +61,6 @@
   }
 }
 
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
 .pageSort li{
   list-style-type: none;
 }
@@ -256,6 +248,29 @@ li.navbar-brand.currentUser:hover {
   font-size: 150px;
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.full-height{
+  height: 900px;
+  overflow: hidden;
+}
+.story {
+  .spacer {
+    margin-top: 250px;
+    margin-bottom: 250px;
+  }
+  .slide-right {
+    margin-right: -400px;
+  }
+  .slide-left {
+    margin-left: -400px;
+  }
+}
 
 
 
