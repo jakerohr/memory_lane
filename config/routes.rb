@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'site#index'
   get 'test' => 'site#show'
+  get 'about' => 'site#about'
 
   # SESSIONS
   get "login" => 'sessions#new'

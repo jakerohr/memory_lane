@@ -71,6 +71,7 @@
               <li><%= link_to "View all", pages_path %></li>
             </ul>
           </li>
+          <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Logout", logout_path %></li>
           <% else %>
           <li><a class='pointer' data-toggle="modal" data-target="#loginModal">Login</a></li>
@@ -116,7 +117,7 @@
           <%= f.email_field :email, placeholder: "Enter Your Email", icon: "user" %>
           <%= f.password_field :password, placeholder: "Enter Your Password", icon: 'lock' %>
           <%= f.password_field :password_confirmation, placeholder: "Confirm Password", icon: 'lock' %>
-          <%= f.submit "Login" %>
+          <%= f.submit "Sign Up" %>
           <% end %>
         </div>
       </div><!-- /.modal-content -->

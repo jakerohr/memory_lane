@@ -53,10 +53,10 @@
   }
 }
 
-.rollin {
+.twofadein {
     overflow: hidden;
 
-    img {
+  img {
     padding: 60px 20px 10px 10px;
   }
 }
@@ -242,6 +242,15 @@ li.navbar-brand.currentUser:hover {
   background-color: #E4E8EB;
 }
 
+#aboutPageTitle {
+  color: #4b738f;
+  text-align: center;
+}
+
+#aboutPageText {
+  color: #4b738f;
+  font-style: italic;
+}
 // Jake's styles
 
 .big-text {

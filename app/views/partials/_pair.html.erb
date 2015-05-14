@@ -1,4 +1,4 @@
-<div id='content_partial_<%= p[:id] %>' class="row circle slide-100">
+<div id='content_partial_<%= p[:id] %>' class="row circle">
   <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
   <div class="col-md-5" data-sr='fade in, over 2s, reset'>
 
@@ -8,7 +8,7 @@
   </div>
 
   <div class="col-md-2" data-sr='fade in, over 2s, reset'>
-    <h1 class="text-edit">
+    <h1 class="text-edit text-center">
       <%= edit_item_text_link p,2 %>
     </h1>
   </div>
@@ -16,7 +16,7 @@
   <div class="col-md-5" data-sr='fade in, over 2s, reset'>
 
       <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="3">
-        <%= image_tag "#{p[:item3]}", class: "img-responsive image-fit md-img" %>
+        <%= image_tag "#{p[:item3]}", class: "img-responsive image-fit" %>
       </a>
   </div>
 </div>
