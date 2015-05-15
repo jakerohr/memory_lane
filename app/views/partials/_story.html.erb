@@ -6,15 +6,15 @@
       <h1 data-sr="" class="text-edit">
         <%= edit_item_text_link p,1 %>
       </h1>
-      <h2 data-sr="wait 1.0s, over 2.0s, scale up 40%, opacity 0.0, reset" class="text-edit">
+      <h2 data-sr="wait 0.5s, over 2.0s, scale up 40%, opacity 0.0, reset" class="text-edit">
         <%= edit_item_text_link p,2 %>
       </h2>
-      <h1 class="slide-right text-edit" data-sr="wait 2.0s, enter left, ease 500px, over 3.0s, scale up 40%, opacity 0.0, reset">
+      <h1 class="slide-right text-edit" data-sr="wait 1.0s, enter left, ease 500px, over 3.0s, scale up 40%, opacity 0.0, reset">
         <%= edit_item_text_link p,3 %>
       </h1>
-      <div class="" data-sr="wait 2.5s, enter right, ease 500px, over 3.0s, scale up 30%, reset">
+      <div class="slide-left" data-sr="wait 0.5s, enter right, ease 500px, over 3.0s, scale up 30%, reset">
         <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="4">
-          <%= image_tag "#{p[:item4]}", class: 'img-responsive image-fit sm-img' %>
+          <%= image_tag "#{p[:item4]}", class: 'img-responsive image-fit lg-img' %>
         </a>
       </div>
     </div>
