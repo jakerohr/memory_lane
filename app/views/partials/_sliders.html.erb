@@ -1,0 +1,51 @@
+<div id='content_partial_<%= p[:id] %>', class="full-height sliders">
+
+  <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
+  <div class="row block">
+    <div class='centered'>
+      <h1>
+        <span data-sr="enter bottom, hustle 20px, move 500px, over 7.0s, scale up 60%, opacity 0.0, reset" class="text-edit">
+          <%= edit_item_text_link p,1 %>
+        </span>
+        <span data-sr="wait 1.0s, enter bottom, move 300px, over 4.5s, scale up 20%, opacity 0.0, reset" class="text-edit">
+         <%= edit_item_text_link p,2 %>
+        </span>
+        <span data-sr="wait 1.0s, enter bottom, ease 80px, move 300px, over 5.0s, scale up 40%, opacity 0.0, reset" class="text-edit">
+          <%= edit_item_text_link p,3 %>
+        </span>
+      </h1>
+      <div class="slide-left" data-sr="wait 2.0s, enter right, hustle 20px, move 1000px, over 6.0s, scale up 20%, reset">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="4">
+          <%= image_tag "#{p[:item4]}", class: 'img-responsive image-fit md-img' %>
+        </a>
+      </div>
+      <div class="slide-right" data-sr="wait 2.5s, enter left, hustle 20px, move 1000px, over 9.0s, scale up 60%, reset">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="5">
+          <%= image_tag "#{p[:item5]}", class: 'img-responsive image-fit md-img' %>
+        </a>
+      </div>
+      <div class="slide-left" data-sr="wait 1.7s, enter right, hustle 20px, move 1000px, over 5.5s, scale up 30%, reset">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="6">
+          <%= image_tag "#{p[:item6]}", class: 'img-responsive image-fit md-img' %>
+        </a>
+      </div>
+      <div class="slide-right" data-sr="wait 2.0s, enter left, hustle 20px, move 1000px, over 7.0s, scale up 50%, reset">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="7">
+          <%= image_tag "#{p[:item7]}", class: 'img-responsive image-fit md-img' %>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

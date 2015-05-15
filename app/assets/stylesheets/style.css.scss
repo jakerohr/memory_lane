@@ -294,7 +294,7 @@ li.navbar-brand.currentUser:hover {
   align-items: center;
 }
 .full-height{
-  height: 900px;
+  height: 1200px;
   overflow: hidden;
 }
 .story {
@@ -306,7 +306,15 @@ li.navbar-brand.currentUser:hover {
     margin-right: -400px;
   }
   .slide-left {
-    margin-left: -400px;
+    margin-left: -230px;
+  }
+}
+.sliders {
+  .slide-right {
+    margin-right: -800px;
+  }
+  .slide-left {
+    margin-left: -800px;
   }
 }
 
