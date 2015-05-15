@@ -101,7 +101,8 @@ ul#list1.pageSort.ui-sortable {
 }
 
 #list1 li,
-.partial-modal-button {
+.partial-modal-button,
+.partial-modal-button a {
   color: #F5F5F5;
   font-weight: bolder;
   border: solid 2px #F5F5F5;
@@ -111,6 +112,13 @@ ul#list1.pageSort.ui-sortable {
   background-color: #93B1C6;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
+ }
+
+ .partial-modal-button:hover,
+ .partial-modal-button a:hover {
+  background-color: #618DAC;
+  text-decoration: none;
+  color: white;
  }
 
 #list1 li:hover{
