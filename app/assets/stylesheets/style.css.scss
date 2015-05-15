@@ -151,7 +151,7 @@ ul#list1.pageSort.ui-sortable {
 }
 
 #body {
-  background-color: #E4E8EB;
+  background-color: #C7D0D5;
   padding-top: 80px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -259,7 +259,8 @@ li.navbar-brand.currentUser:hover {
 
 .aboutPage {
   img {
-    border: 2px #E4E8EB;
+    border: solid 5px #E4E8EB;
+    border-radius: 20px;
   }
 }
 // Jake's styles
@@ -271,9 +272,17 @@ li.navbar-brand.currentUser:hover {
 // Footer
 .footer {
   text-align: center;
+  padding: 10px 0px 10px 0px;
+  height: 50%;
 
-  .aboutText {
-    text-align: right;
+  p {
+    padding: 10px 10px 10px 40px;
+    font-size: 20px;
+  }
+
+  p a {
+    text-decoration: none;
+    color: #4b738f;
   }
 }
 
