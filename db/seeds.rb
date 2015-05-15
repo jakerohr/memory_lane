@@ -60,6 +60,7 @@ page.partials << partial13
 page.partials << partial14
 page.partials << partial15
 page.partials << partial16
+
 user.partials << partial1
 user.partials << partial2
 user.partials << partial3
@@ -167,16 +168,16 @@ user.partials << home2
 user.partials << home3
 user.partials << home4
 
-h1 = PagesPartial.find_by_id(19)
+h1 = PagesPartial.find_by_id(17)
 h1.partial_order = 0
 h1.save
-h2 = PagesPartial.find_by_id(20)
+h2 = PagesPartial.find_by_id(18)
 h2.partial_order = 1
 h2.save
-h3 = PagesPartial.find_by_id(21)
+h3 = PagesPartial.find_by_id(19)
 h3.partial_order = 2
 h3.save
-h3 = PagesPartial.find_by_id(22)
+h3 = PagesPartial.find_by_id(20)
 h3.partial_order = 3
 h3.save
 
@@ -194,9 +195,23 @@ user.partials << partial15
 user.partials << partial16
 user.partials << partial8
 
-n1 = PagesPartial.find_by_id(17)
+n1 = PagesPartial.find_by_id(21)
 n1.partial_order = 0
 n1.save
-n2 = PagesPartial.find_by_id(18)
+n2 = PagesPartial.find_by_id(22)
 n2.partial_order = 1
 n2.save
+n3 = PagesPartial.find_by_id(23)
+n3.partial_order = 2
+n3.save
+n4 = PagesPartial.find_by_id(24)
+n4.partial_order = 3
+n4.save
+n5 = PagesPartial.find_by_id(25)
+n5.partial_order = 4
+n5.save
+
+
+
+
+
