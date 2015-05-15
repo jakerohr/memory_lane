@@ -386,22 +386,29 @@ li.navbar-brand.currentUser:hover {
   }
 }
 
-// .two-images {
-//   width:100%;
-//   overflow: hidden;
+.two-images {
+  width:100%;
+  // overflow: hidden;
 
-//   // img {
-//   //   border-radius: 20px;
-//   //   margin: 10px 60px 10px 60px;
-//   //   max-width: 100%;
-//   //   height: auto;
-//   //   overflow: hidden;
-//   // }
+  img {
+    border-radius: 20px;
+    padding: 0px 0px 0px 0px;
 
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+}
+
+
+// .twofadein {
+//     overflow: hidden;
+
+//   img {
+//     padding: 60px 20px 10px 10px;
+//   }
 // }
-
-
-
 
 
 
