@@ -30,11 +30,11 @@
 }
 
 .threes {
-    // overflow: hidden;
+    overflow: hidden;
 
     img {
-    border-radius: 20px;
-    padding: 10px 0 10px 0;
+    border-radius: 50px;
+    padding: 100px 0 10px 0;
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
   }
@@ -353,10 +353,17 @@ li.navbar-brand.currentUser:hover {
   display: flex;
   align-items: center;
 }
+
 .full-height{
   height: 1200px;
   overflow: hidden;
 }
+
+.welcome {
+  height: 900px;
+  overflow: hidden;
+}
+
 .story {
 
   .spacer {
@@ -372,25 +379,25 @@ li.navbar-brand.currentUser:hover {
 }
 
 .sliders {
-  height: 1400px;
+  height: 1500px;
   .slide-left {
     margin-left: -900px;
   }
 }
 
-.two-images {
-  // width:100%;
-  // overflow: hidden;
+// .two-images {
+//   width:100%;
+//   overflow: hidden;
 
-  img {
-    border-radius: 20px;
-    margin: 10px 60px 10px 60px;
-    width: 600px;
-    height: auto;
-    overflow: hidden;
-  }
+//   // img {
+//   //   border-radius: 20px;
+//   //   margin: 10px 60px 10px 60px;
+//   //   max-width: 100%;
+//   //   height: auto;
+//   //   overflow: hidden;
+//   // }
 
-}
+// }
 
 
 
