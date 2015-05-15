@@ -1,15 +1,27 @@
-<div id='content_partial_<%= p[:id] %>', class="slide-100">
+<div id='content_partial_<%= p[:id] %>' data-sr="enter left, hustle 20px, move 100px, spin -30deg, over 1.0s, scale up 20%, reset" class="row two-for-two">
 
   <div class="delete-partial-x-styling delete-partial-x" data-idx="<%= p[:id] %>"><span class="glyphicon glyphicon-remove"></span></div>
-  <div class="row block">
-    <div class='centered'>
-      <h1 data-sr="enter top, hustle 20px, move 300px, over 3.0s, scale up 40%, opacity 0.0, reset" class="text-edit">
-        <%= edit_item_text_link p,1 %>
-      </h1>
-      <br>
-      <h2 data-sr="enter top, hustle 20px, move 300px, over 3.0s, scale up 40%, opacity 0.0, reset, wait 1.0s">
-        &darr;
-      </h2>
+  <div class="row">
+    <div class="col-left-third">
+      <div class="" data-sr="enter left, hustle 20px, move 600px, spin -150deg, over 3.0s, scale down 30%, reset, wait 1.0s">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="1">
+          <%= image_tag "#{p[:item1]}", class: 'img-responsive image-fit vert-align' %>
+        </a>
+      </div>
+    </div>
+    <div class="col-center-third">
+      <div class="" data-sr="enter bottom, hustle 20px, move 600px, over 3.0s, scale up 30%, reset">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="2">
+          <%= image_tag "#{p[:item2]}", class: 'img-responsive image-fit' %>
+        </a>
+      </div>
+    </div>
+    <div class="col-right-third">
+      <div class="" data-sr="enter right, hustle 20px, move 600px, spin 150deg, over 3.0s, scale up 30%, reset, wait 1.0s">
+        <a href="#" class="upload_widget_opener" data-idx="<%= p.id %>" data-item="3">
+          <%= image_tag "#{p[:item3]}", class: 'img-responsive image-fit right' %>
+        </a>
+      </div>
     </div>
   </div>
 </div>
