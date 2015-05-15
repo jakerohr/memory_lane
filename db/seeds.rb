@@ -167,16 +167,16 @@ user.partials << home2
 user.partials << home3
 user.partials << home4
 
-h1 = PagesPartial.find_by_id(17)
+h1 = PagesPartial.find_by_id(19)
 h1.partial_order = 0
 h1.save
-h2 = PagesPartial.find_by_id(18)
+h2 = PagesPartial.find_by_id(20)
 h2.partial_order = 1
 h2.save
-h3 = PagesPartial.find_by_id(19)
+h3 = PagesPartial.find_by_id(21)
 h3.partial_order = 2
 h3.save
-h3 = PagesPartial.find_by_id(20)
+h3 = PagesPartial.find_by_id(22)
 h3.partial_order = 3
 h3.save
 
