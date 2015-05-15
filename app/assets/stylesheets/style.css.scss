@@ -387,16 +387,16 @@ li.navbar-brand.currentUser:hover {
 }
 
 .two-images {
-  width:100%;
+  height: 800px;
   // overflow: hidden;
 
   img {
     border-radius: 20px;
-    padding: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
 
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
+    // max-width: 100%;
+    // height: auto;
+    // overflow: hidden;
   }
 
 }
