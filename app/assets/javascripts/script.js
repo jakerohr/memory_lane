@@ -1,3 +1,13 @@
+// function initList2(scope){
+//   $(scope).find('.delete-partial-x, .remove-partial-sidebar').on('click', function(){
+//   });
+// }
+
+// //document ready init all items
+// initList2($('#list2'));
+
+// initList2($('#idOfNewItem'));
+
 $(function(){
   cloudinary.setCloudName('memoryln');
 
@@ -9,6 +19,7 @@ $(function(){
     })
     return;
   }
+
 
   // SORTABLE FUNCTION
   var lst, pre;
@@ -79,9 +90,36 @@ $(function(){
 
 
   // ADD PARTIAL FUNCTION
+    //Loading Screen
+    var opts = {
+      lines: 11, // The number of lines to draw
+      length: 0, // The length of each line
+      width: 10, // The line thickness
+      radius: 19, // The radius of the inner circle
+      corners: 1, // Corner roundness (0..1)
+      rotate: 0, // The rotation offset
+      direction: 1, // 1: clockwise, -1: counterclockwise
+      color: '#4b738f', // #rgb or #rrggbb or array of colors
+      speed: 1, // Rounds per second
+      trail: 60, // Afterglow percentage
+      shadow: false, // Whether to render a shadow
+      hwaccel: false, // Whether to use hardware acceleration
+      className: 'spinner', // The CSS class to assign to the spinner
+      zIndex: 2e9, // The z-index (defaults to 2000000000)
+      top: '50%', // Top position relative to parent
+      left: '50%' // Left position relative to parent
+    };
+
+
+
   $('.new_partial').on('submit', function(e){
     e.preventDefault();
     var form = $(this)
+    form.closest('table').hide();
+    var target = $('#newPartialModal .modal-body');
+    var spinner = new Spinner(opts).spin();
+    target.append(spinner.el).addClass('loading');
+
     var data = {partial:{}};
     $.ajax({
       url:form.attr('action'),
@@ -98,7 +136,7 @@ $(function(){
       // $('#list1').append('<li id="partial_'+pid+'" class="pointerSidebar">My new partial</li>')
 
       // console.log(data);
-      $('#newPartialModal').modal('hide');
+      // $('#newPartialModal').modal('hide');
       // add loading dialog
       window.location.reload(true)
     }).error(function(err){

@@ -1,3 +1,7 @@
+.loading {
+  height: 100px;
+}
+
 .partial-table td {
   text-align: left;
 }
