@@ -1,17 +1,22 @@
 .back-btn {
-  background-color: #C7D0D5;
   text-align: center;
-  height: 25px;
-  -webkit-border-bottom-right-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  height: 45px;
 }
 
 .back-btn a {
   padding: 5px 10% 5px 10%;
+  background-color: #C7D0D5;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4b738f;
+}
+
+.back-btn a:hover {
+  color: #618DAC;
+}
+
+div.row.back-btn {
+  padding-top: 10px;
 }
 
 .loading {

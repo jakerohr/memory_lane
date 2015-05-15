@@ -1,10 +1,13 @@
+
+<div class="<%= @current_background.bg_class %>">
+<div class="row back-btn">
 <% if @back %>
-  <div class="col-lg-offset-5 col-lg-2 back-btn">
+  <div class="col-lg-offset-5 col-lg-2">
 
     <%= link_to "Back To Edit Page", edit_page_path(@page) %>
   </div>
 <% end %>
-<div class="<%= @current_background.bg_class %>">
+</div>
   <ul id="list2" class="pageSort show-partial-list">
     <% @partials.each do |e| %>
     <li><%= render partial: "partials/#{e.partial.path}", locals: {p:e.partial} %></li>
