@@ -28,7 +28,7 @@ partial4 = Partial.create(path: "three_images", name: "Three Images", item1: "ht
 partial5 = Partial.create(path: "text_left_img_right", name: "Text Left Image Right", item1: "Your Text goes here", item2: "And here's another spot for text, just for fun!", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial6 = Partial.create(path: "threes", name: "Threes", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial7 = Partial.create(path: "two_fade_in", name: "Two Fade In", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
-partial8 = Partial.create(path: "featured", name: "Featured", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "Hello! Using Memory Ln is easy. You build pages by adding blocks. Think of a block like an animating page in a scrap book. Want a longer, better, and all around cooler page? Add more blocks by clicking the '+' button on the left. Change text and imagesnby clicking them. Drag and drop the elements on the side bar to rearrange the page. It's easy! Oh, and don't forget to share with your friends.")
+partial8 = Partial.create(path: "featured", name: "Featured", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "Hello! Using Memory Ln is easy. You build pages by adding blocks. Think of a block like an animating page in a scrap book. Want a longer, better, and all around cooler page? Add more blocks by clicking the '+' button on the left. Change text and images by clicking them. Drag and drop the elements on the side bar to rearrange the page. It's easy! Oh, and don't forget to share with your friends.")
 partial9 = Partial.create(path: "collage", name: "Collage", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item4: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item5: "Hey look, I'm text that can say what ever you want me to say!", item6: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item7: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item8: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item9: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial10 = Partial.create(path: "pair", name: "Pair & Text", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "Look at this craaazzzy text!", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial11 = Partial.create(path: "title_text_top", name: "Title Text Top", item1: "Your Title Here")
@@ -167,13 +167,13 @@ user.partials << home2
 user.partials << home3
 user.partials << home4
 
-h1 = PagesPartial.find_by_id(16)
+h1 = PagesPartial.find_by_id(17)
 h1.partial_order = 0
 h1.save
-h2 = PagesPartial.find_by_id(15)
+h2 = PagesPartial.find_by_id(18)
 h2.partial_order = 1
 h2.save
-h3 = PagesPartial.find_by_id(18)
+h3 = PagesPartial.find_by_id(19)
 h3.partial_order = 2
 h3.save
 h3 = PagesPartial.find_by_id(20)
@@ -184,8 +184,14 @@ t1.pages << home_page
 
 # NEW PAGE
 new_page.partials << partial13
+new_page.partials << partial14
+new_page.partials << partial15
+new_page.partials << partial16
 new_page.partials << partial8
 user.partials << partial13
+user.partials << partial14
+user.partials << partial15
+user.partials << partial16
 user.partials << partial8
 
 n1 = PagesPartial.find_by_id(17)
