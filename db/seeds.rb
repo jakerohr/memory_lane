@@ -24,8 +24,8 @@ user.pages << new_page
 partial1 = Partial.create(path: "title_text", name: "Title Text", item1: "Click to add Your Title Here")
 partial2 = Partial.create(path: "two_for_three", name: "Two Images & Text", item1: "Click to add text here", item2: "And here...", item3: "Or even here!", item4: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431650296/3/uzwnjawz0k62eurckyyj.jpg", item5: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431647116/3/xnnfq4dyvykkcjlzxcft.jpg")
 partial3 = Partial.create(path: "two_images", name: "Two Images", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431646885/3/hfvsp56cirrpdjz8gawl.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431473782/2/ezgmv9yvueddxfun06kn.jpg")
-partial4 = Partial.create(path: "three_images", name: "Three Images", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431460730/2/pjepkdb6rbitqxhc5kt6.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431556906/2/ovgi2riyttieuhmi7i2j.jpg", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
-partial5 = Partial.create(path: "text_left_img_right", name: "Text Left Image Right", item1: "Click to add your text here", item2: "And here's another spot for text, just for fun!", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
+partial4 = Partial.create(path: "three_images", name: "Three Images", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431460730/2/pjepkdb6rbitqxhc5kt6.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431556906/2/ovgi2riyttieuhmi7i2j.jpg", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431645644/3/yawzsbh32qwcnajwrruk.jpg")
+partial5 = Partial.create(path: "one_image", name: "One Image", item1: "Your Text goes here", item2: "And here's another spot for text, just for fun!", item3: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431647018/3/adnc9mfiimvejmfrxpbl.jpg")
 partial6 = Partial.create(path: "threes", name: "Threes", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial7 = Partial.create(path: "two_fade_in", name: "Two Fade In", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg")
 partial8 = Partial.create(path: "featured", name: "Featured", item1: "http://res.cloudinary.com/memoryln/image/upload/l_text:Montserrat_90_bold:Click to Upload Photo,co_rgb:020205,o_65/v1431036123/test_images/lighthouse-93487_1280.jpg", item2: "Using Memory Ln is easy. You build pages by adding blocks which contain customizable animated text and images. Want a longer, better, and all around cooler page? Add more blocks by clicking the '+' button on the left. Change text and images by clicking them. Drag and drop the elements on the side bar to rearrange the page. It's easy! Oh, and don't forget to share with your friends.")
@@ -60,6 +60,7 @@ page.partials << partial13
 page.partials << partial14
 page.partials << partial15
 page.partials << partial16
+
 user.partials << partial1
 user.partials << partial2
 user.partials << partial3
@@ -167,16 +168,16 @@ user.partials << home2
 user.partials << home3
 user.partials << home4
 
-h1 = PagesPartial.find_by_id(19)
+h1 = PagesPartial.find_by_id(17)
 h1.partial_order = 0
 h1.save
-h2 = PagesPartial.find_by_id(20)
+h2 = PagesPartial.find_by_id(18)
 h2.partial_order = 1
 h2.save
-h3 = PagesPartial.find_by_id(21)
+h3 = PagesPartial.find_by_id(19)
 h3.partial_order = 2
 h3.save
-h3 = PagesPartial.find_by_id(22)
+h3 = PagesPartial.find_by_id(20)
 h3.partial_order = 3
 h3.save
 
@@ -194,9 +195,23 @@ user.partials << partial15
 user.partials << partial16
 user.partials << partial8
 
-n1 = PagesPartial.find_by_id(17)
+n1 = PagesPartial.find_by_id(21)
 n1.partial_order = 0
 n1.save
-n2 = PagesPartial.find_by_id(18)
+n2 = PagesPartial.find_by_id(22)
 n2.partial_order = 1
 n2.save
+n3 = PagesPartial.find_by_id(23)
+n3.partial_order = 2
+n3.save
+n4 = PagesPartial.find_by_id(24)
+n4.partial_order = 3
+n4.save
+n5 = PagesPartial.find_by_id(25)
+n5.partial_order = 4
+n5.save
+
+
+
+
+
