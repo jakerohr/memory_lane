@@ -87,6 +87,19 @@ class PagesController < ApplicationController
     end
     end
 
+  def destroy
+    p = Page.find_by_id(params[:id])
+    pages_partial = p.pages_partials.find_by_page_id(params[:id])
+    partials = p.partials
+
+    if pages_partial
+      p.pages_partials.clear()
+      partials.clear()
+      p.delete
+      redirect_to pages_path
+    end
+  end
+
   private
   def pages_params
     params.require(:page).permit(:name,:background_id)
