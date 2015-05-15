@@ -1,3 +1,13 @@
+// function initList2(scope){
+//   $(scope).find('.delete-partial-x, .remove-partial-sidebar').on('click', function(){
+//   });
+// }
+
+// //document ready init all items
+// initList2($('#list2'));
+
+// initList2($('#idOfNewItem'));
+
 $(function(){
   cloudinary.setCloudName('memoryln');
 
@@ -9,6 +19,7 @@ $(function(){
     })
     return;
   }
+
 
   // SORTABLE FUNCTION
   var lst, pre;
