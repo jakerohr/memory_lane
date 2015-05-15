@@ -30,7 +30,7 @@
 }
 
 .threes {
-    overflow: hidden;
+    // overflow: hidden;
 
     img {
     border-radius: 20px;
@@ -68,7 +68,7 @@
 .sidebar {
   position: fixed;
   min-width: 200px;
-  height: 87%;
+  height: 90%;
   background-color: #C7D0D5;
   text-align: center;
   width: auto;
@@ -332,6 +332,11 @@ li.navbar-brand.currentUser:hover {
     color: #4b738f;
   }
 }
+// Jake's styles
+
+.big-text {
+  font-size: 150px;
+}
 
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -341,20 +346,42 @@ li.navbar-brand.currentUser:hover {
   align-items: center;
 }
 .full-height{
-  height: 900px;
+  height: 1200px;
   overflow: hidden;
 }
 .story {
+
   .spacer {
     margin-top: 250px;
-    margin-bottom: 250px;
+    // margin-bottom: 70px;
   }
   .slide-right {
     margin-right: -400px;
   }
   .slide-left {
-    margin-left: -400px;
+    margin-left: -230px;
   }
+}
+
+.sliders {
+  height: 1400px;
+  .slide-left {
+    margin-left: -900px;
+  }
+}
+
+.two-images {
+  // width:100%;
+  // overflow: hidden;
+
+  img {
+    border-radius: 20px;
+    margin: 10px 60px 10px 60px;
+    width: 600px;
+    height: auto;
+    overflow: hidden;
+  }
+
 }
 
 
