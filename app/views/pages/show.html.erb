@@ -1,3 +1,9 @@
+<% if @back %>
+  <div class="col-lg-offset-5 col-lg-2 back-btn">
+
+    <%= link_to "Back To Edit Page", edit_page_path(@page) %>
+  </div>
+<% end %>
 <div class="<%= @current_background.bg_class %>">
   <ul id="list2" class="pageSort show-partial-list">
     <% @partials.each do |e| %>
