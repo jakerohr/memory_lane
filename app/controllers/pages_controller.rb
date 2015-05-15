@@ -6,9 +6,12 @@ class PagesController < ApplicationController
   end
 
   def show
-    page = Page.find_by_id(params[:id])
-    @current_background = page.background
-    @partials = page.pages_partials.order(partial_order: 'asc')
+    @page = Page.find_by_id(params[:id])
+    if current_user == @page.user
+      @back = true
+    end
+    @current_background = @page.background
+    @partials = @page.pages_partials.order(partial_order: 'asc')
     # render :json => params
   end
 
