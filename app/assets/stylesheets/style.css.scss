@@ -259,10 +259,21 @@ li.navbar-brand.currentUser:hover {
 
 .aboutPage {
   img {
-    border: solid 5px #E4E8EB;
+    border: solid 10px #E4E8EB;
     border-radius: 20px;
   }
 }
+
+.aboutPageName {
+  color: #4b738f;
+}
+
+.aboutList {
+  list-style-type: none;
+  padding-left: 0px;
+  text-align: center;
+}
+
 // Jake's styles
 
 .big-text {
@@ -272,12 +283,48 @@ li.navbar-brand.currentUser:hover {
 // Footer
 .footer {
   text-align: center;
-  padding: 10px 0px 10px 0px;
-  height: 50%;
+  padding: 10px 0px 40px 0px;
+  height: 30px;
 
   p {
     padding: 10px 10px 10px 40px;
     font-size: 20px;
+    display: inline
+  }
+
+  p a {
+    text-decoration: none;
+    color: #4b738f;
+  }
+}
+
+.stickyFooter {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0px 40px 0px;
+  text-align: center;
+
+  p {
+    display: inline;
+    font-size: 20px;
+    padding: 10px 10px 10px 40px;
+  }
+
+  p a {
+    text-decoration: none;
+    color: #4b738f;
+  }
+}
+
+.showPageFooter {
+  text-align: center;
+  padding: 10px 0px 60px 0px;
+  height: 30px;
+
+  p {
+    padding: 10px 10px 60px 40px;
+    font-size: 20px;
+    display: inline
   }
 
   p a {
