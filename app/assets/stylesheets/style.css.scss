@@ -268,8 +268,10 @@ li.navbar-brand.currentUser:hover {
   color: #4b738f;
 }
 
-.aboutList ul li {
+.aboutList {
   list-style-type: none;
+  padding-left: 0px;
+  text-align: center;
 }
 
 // Jake's styles
